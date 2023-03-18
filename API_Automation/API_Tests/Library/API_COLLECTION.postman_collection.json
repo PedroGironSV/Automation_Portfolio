@@ -1,0 +1,441 @@
+{
+	"info": {
+		"_postman_id": "ce72b8a0-0242-4f31-b095-8ecb2b9d5694",
+		"name": "API_TESTING",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23157312"
+	},
+	"item": [
+		{
+			"name": "Initialization Steps",
+			"item": [
+				{
+					"name": "Cleanup Data",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.globals.clear();"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_dummy}}",
+							"host": [
+								"{{url_dummy}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Framework Initialization",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"if(pm.globals.get(\"module:framework\") === undefined){",
+									"    try {",
+									"        eval(responseBody);",
+									"        pm.globals.set('module:framework', responseBody);",
+									"    } catch (error) {",
+									"        console.error('Error initialization framework: ' + error.message);",
+									"        postman.setNextRequest(null);",
+									"    }",
+									"",
+									"    tests['Framework ready'] = typeof checkCore === 'function';",
+									"    pm.globals.set(\"isFrameworkInitialized\", \"true\");",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"if(pm.globals.get(\"module:framework\") === undefined){",
+									"    pm.globals.clear();",
+									"    pm.request.url = pm.environment.get(\"url_initialization_framework\");",
+									"}else{",
+									"    console.log('PRE REQUEST ELSE')",
+									"    const clean = _.keys(pm.globals.toObject())",
+									"    _.each(clean, (arrItem) => {",
+									"        let result = (arrItem.toLowerCase() === \"module:framework\" || arrItem.toLowerCase() === \"isFrameworkInitialized\".toLowerCase() || arrItem.toLowerCase() === \"module:testData\".toLowerCase()); ",
+									"        if(result == false){",
+									"            postman.clearGlobalVariable(arrItem);",
+									"        }",
+									"    })",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Cache-Control",
+								"value": "no-cache, no-store"
+							}
+						],
+						"url": {
+							"raw": "{{url_dummy}}",
+							"host": [
+								"{{url_dummy}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Test Data Initialization",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"eval(pm.globals.get('module:framework'));\r",
+									"retrieveTestScriptData();\r",
+									"retrieveTestScriptParameters();"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_initialization_input_data}}",
+							"host": [
+								"{{url_initialization_input_data}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Test Validations Initialization",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"eval(pm.globals.get('module:framework'));\r",
+									"retrieveValidationsScript();\r",
+									"\r",
+									"eval(pm.globals.get('module:testValidation'));\r",
+									"checkValidationsCore();"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_initialization_test_validations}}",
+							"host": [
+								"{{url_initialization_test_validations}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "VALIDATE ALL USERS",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"eval(pm.globals.get('module:testValidation'));\r",
+							"validateAllUsersTest();"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{all_users}}",
+					"host": [
+						"{{all_users}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VALIDATE SPECIFIC USER",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"eval(pm.globals.get('module:testValidation'));\r",
+							"validateSpecificUserTest();\r",
+							"\r",
+							"/*\r",
+							"var specificUser = pm.response.json();\r",
+							"\r",
+							"pm.test(pm.request.method + \" \" + request.name + \" - Validate success status code\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(pm.request.method + \" \" + request.name + \" - Validate response time is below 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});\r",
+							"\r",
+							"pm.test(pm.request.method + \" \" + request.name + \" - Validate userId is a number\", function () {\r",
+							"    pm.expect(specificUser.userId).to.be.a(\"number\");\r",
+							"});\r",
+							"\r",
+							"pm.test(pm.request.method + \" \" + request.name + \" - Validate id is a number\", function () {\r",
+							"    pm.expect(specificUser.id).to.be.a(\"number\");\r",
+							"});\r",
+							"\r",
+							"pm.test(pm.request.method + \" \" + request.name + \" - Validate title is a string\", function () {\r",
+							"    pm.expect(specificUser.title).to.be.a(\"string\");\r",
+							"});\r",
+							"\r",
+							"pm.test(pm.request.method + \" \" + request.name + \" - Validate id is a string\", function () {\r",
+							"    pm.expect(specificUser.body).to.be.a(\"string\");\r",
+							"});\r",
+							"*/"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{look_for_user_by_id}}",
+					"host": [
+						"{{look_for_user_by_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE NEW USER",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"eval(pm.globals.get('module:testValidation'));\r",
+							"validateCreateNewUserTest();"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": {{newElementId}},\r\n    \"title\": \"{{newUserTitle}}\",\r\n    \"body\": \"{{newUserBody}}\",\r\n    \"userId\": {{newUserId}}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{all_users}}",
+					"host": [
+						"{{all_users}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE ALL USER DATA",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"eval(pm.globals.get('module:testValidation'));\r",
+							"validateUserUpdateTest();"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"{{updateUserTitle}}\",\r\n    \"body\": \"{{updateUserBody}}\",\r\n    \"userId\": {{updateUserId}}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{update_user_by_id}}",
+					"host": [
+						"{{update_user_by_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE PARTIAL USER DATA",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"eval(pm.globals.get('module:testValidation'));\r",
+							"validatePartialUserUpdateTest();"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"{{partialUpdateUserTitle}}\",\r\n    \"body\": \"{{partialUpdateUserBody}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{partial_update_user_by_id}}",
+					"host": [
+						"{{partial_update_user_by_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE USER",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"eval(pm.globals.get('module:testValidation'));\r",
+							"validateDeleteUserTest();"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{delete_user_by_id}}",
+					"host": [
+						"{{delete_user_by_id}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

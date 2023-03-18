@@ -1,0 +1,30 @@
+[
+  {
+    "mainHTTPMethods":{
+      "getMethod": {
+        "searchSpecificUserId": 25
+      },
+      "postMethod": {
+        "newElementId": 101,
+        "newUserId": 101,
+        "newUserTitle": "POST method test",
+        "newUserBody": "Testing the creation of a new user"
+      },
+      "putMethod": {
+        "updateUserId": 45,
+        "updateUserTitle": "PUT method test",
+        "updateUserBody": "Updating an user"
+      },
+      "patchMethod": {
+        "partialUpdateUserTitle": "PATCH method test",
+        "partialUpdateUserBody": "Partial update of an user"
+      },
+      "deleteMethod": {
+        "deleteUserId": 63
+      },
+      "expectedResponseTime": {
+        "maxAPIResponseTime": 500
+      }
+    }
+  }
+]

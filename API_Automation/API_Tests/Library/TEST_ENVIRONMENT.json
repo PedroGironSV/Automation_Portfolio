@@ -1,0 +1,65 @@
+{
+	"id": "4394e4bb-1922-4222-9c76-7a88203f00aa",
+	"name": "TEST_ENVIRONMENT",
+	"values": [
+		{
+			"key": "url_initialization_framework",
+			"value": "http://localhost:8080/API_Tests/Library/framework.js",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "url_initialization_test_validations",
+			"value": "http://localhost:8080/API_Tests/tests_validations.js",
+			"enabled": true
+		},
+		{
+			"key": "url_initialization_input_data",
+			"value": "http://localhost:8080/API_Tests/InputData.json",
+			"enabled": true
+		},
+		{
+			"key": "url_dummy",
+			"value": "https://www.postman.com/",
+			"enabled": true
+		},
+		{
+			"key": "url_base",
+			"value": "https://jsonplaceholder.typicode.com",
+			"enabled": true
+		},
+		{
+			"key": "all_users",
+			"value": "{{url_base}}/posts",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "look_for_user_by_id",
+			"value": "{{all_users}}/{{searchSpecificUserId}}",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "update_user_by_id",
+			"value": "{{all_users}}/{{updateUserId}}",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "partial_update_user_by_id",
+			"value": "{{all_users}}/{{partialUpdateUserId}}",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "delete_user_by_id",
+			"value": "{{all_users}}/{{deleteUserId}}",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2023-01-18T14:42:31.652Z",
+	"_postman_exported_using": "Postman/10.0.35"
+}
