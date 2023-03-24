@@ -1,6 +1,7 @@
 const static = require('node-static');
 const http = require('http');
-const newman = require("newman");
+const newman = require('newman');
+const shell = require('shelljs');
 
 const file_path = new (static.Server)("./");
 
@@ -19,7 +20,7 @@ function executeCollection(){
     let title, reportTitle, reportPath;
     title = "Portfolio Report"
     reportTitle = "API Execution Report"
-    reportPath = "Execution Results/portfolio_report.html";
+    reportPath = "Execution_Report/portfolio_report.html";
 
     setUpLocalServer();
     
@@ -42,7 +43,7 @@ function executeCollection(){
         }
     }, function (error){
         if(error) { throw error; }
-        console.log('\n\nExecution completed, find the results report within folder: Execution Results and open it on your default browser');
+        shell.exec('start '+ reportPath);
     }
     );
 }
