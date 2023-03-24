@@ -67,13 +67,11 @@ public class BrowserActions {
         String elementTag = targetElement.getTagName();
         elementClass = elementClass.replace(" ", ".");
         querySelector = "document.querySelector('"+ elementTag + "."+ elementClass +"').style.border='3px solid red'";
-        System.out.println(querySelector);
 		((JavascriptExecutor) Driver.getDriver()).executeScript(querySelector);
 		implicitWait();
 	}
 
     public void takeScreenShot(Scenario scenario){
-        System.out.println("Take Screenshot: "+ scenario.getName());
         byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
         scenario.attach(screenshot, "image/png", "stepEvidence");
     }
