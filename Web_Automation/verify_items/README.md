@@ -12,14 +12,23 @@ Verify items available to add to shopping cart on Amazon web page, using as auto
 
  - [Install Visual Studio Code](https://code.visualstudio.com/download)
  - Add the following plugins on VS Code:
-	1. Extension Pack for Java
-	2. Cucumber (Gherkin) Full Support
+
+```
+Extension Pack for Java
+```
+
+ ![enter image description here](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjT__jKhwcihG6aojttzI7fIQvrkHJ6Mrm49JpQTV7uXF5tCba_OWxTQ7CRzQqEmp5LGAa2MkWZbYUkMze3CFxSkyf9IuMEERCI92ENXg0kdmRaowyJiDiV4knMGyyM8urDCmbGk7roZdm4NdDc_0yTUN_sgGP_bIiX8LA93aqdRTZXzIMibHWFvpAIXQ/w640-h374/Pack_Java.PNG)
+ 
+ ```
+Cucumber (Gherkin) Full Support
+```
+  ![enter image description here](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgt6D-h80odPmRQmj62UJ6Rbl3hV9altbbI9n5wE9N34AkTEd_ayJ7KGaWNBnJSJZ8HS6qGTK5zPAsr38htLQ5CdUo0rYtwo6ZhkcK0cUCAxiUBVk9FadyYNQi2ZXd-Fgyo6PdzkUHpBrY38F-snLJuctIHuHpojaqWteJjcTYxByNTWhnbFVlTFYInuQ/w640-h264/Cucumber_Ext.PNG)
 	
 **Run the automated test**
 
  - Clone the repo
  
- ```
+```
 git clone https://github.com/PedroGironSV/Automation_Portfolio.git
 ```
 
