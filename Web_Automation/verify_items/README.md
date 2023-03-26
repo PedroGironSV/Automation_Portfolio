@@ -8,7 +8,7 @@ Verify items available to add to shopping cart on Amazon web page, using as auto
  - Gherkin language
  - Cucumber report
 
-**Local configuration requeriments**
+**Local configuration requirements**
 
  - [Install Visual Studio Code](https://code.visualstudio.com/download)
  - Add the following plugins on VS Code:
