@@ -82,7 +82,7 @@ public class Tests extends BrowserActions {
         click(resultPage.getTargetItemLink());
     }
 
-    @And("I add the item to shopping cart")
+    @And("I see the description and add the item to shopping cart")
     public void tryToAddTheItemToShoppingCart() {
         String addToCartButton = "Button Add to Cart is Present";
         itemDescription.setUpWebElements();

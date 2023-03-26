@@ -1,4 +1,4 @@
-Feature: Check items available for sale
+Feature: Check items available to add to shopping cart
 
     As user I want to check if I could add to shopping cart any searched item.
 
@@ -10,7 +10,7 @@ Feature: Check items available for sale
         When I see the results list for "<item>"
         And I navigate to page "<page>"
         And I select the item <index>
-        And I add the item to shopping cart
+        And I see the description and add the item to shopping cart
         Then I see the confirmation message
         And I see the cart items count is "<itemsCount>"
         Examples:
