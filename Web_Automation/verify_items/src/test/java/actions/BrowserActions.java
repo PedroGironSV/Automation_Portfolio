@@ -77,7 +77,11 @@ public class BrowserActions {
     }
 
     public static void closeBrowser() {
-		Driver.getDriver().quit();
+		try{
+            Driver.getDriver().quit();
+        }catch(Exception exception){
+            System.err.println("Exception at close browser: "+ exception.getMessage());
+        }
 	}
 
 }

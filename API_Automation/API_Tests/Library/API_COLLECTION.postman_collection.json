@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "ce72b8a0-0242-4f31-b095-8ecb2b9d5694",
+		"_postman_id": "855ae140-b981-42e3-a37c-00bf4a68890f",
 		"name": "API_TESTING",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "23157312"
@@ -215,35 +215,7 @@
 					"script": {
 						"exec": [
 							"eval(pm.globals.get('module:testValidation'));\r",
-							"validateSpecificUserTest();\r",
-							"\r",
-							"/*\r",
-							"var specificUser = pm.response.json();\r",
-							"\r",
-							"pm.test(pm.request.method + \" \" + request.name + \" - Validate success status code\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
-							"});\r",
-							"\r",
-							"pm.test(pm.request.method + \" \" + request.name + \" - Validate response time is below 500ms\", function () {\r",
-							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
-							"});\r",
-							"\r",
-							"pm.test(pm.request.method + \" \" + request.name + \" - Validate userId is a number\", function () {\r",
-							"    pm.expect(specificUser.userId).to.be.a(\"number\");\r",
-							"});\r",
-							"\r",
-							"pm.test(pm.request.method + \" \" + request.name + \" - Validate id is a number\", function () {\r",
-							"    pm.expect(specificUser.id).to.be.a(\"number\");\r",
-							"});\r",
-							"\r",
-							"pm.test(pm.request.method + \" \" + request.name + \" - Validate title is a string\", function () {\r",
-							"    pm.expect(specificUser.title).to.be.a(\"string\");\r",
-							"});\r",
-							"\r",
-							"pm.test(pm.request.method + \" \" + request.name + \" - Validate id is a string\", function () {\r",
-							"    pm.expect(specificUser.body).to.be.a(\"string\");\r",
-							"});\r",
-							"*/"
+							"validateSpecificUserTest();"
 						],
 						"type": "text/javascript"
 					}
