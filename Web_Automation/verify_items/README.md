@@ -17,12 +17,12 @@ Verify items available to add to shopping cart on Amazon web page, using as auto
 Extension Pack for Java
 ```
 
- ![enter image description here](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjT__jKhwcihG6aojttzI7fIQvrkHJ6Mrm49JpQTV7uXF5tCba_OWxTQ7CRzQqEmp5LGAa2MkWZbYUkMze3CFxSkyf9IuMEERCI92ENXg0kdmRaowyJiDiV4knMGyyM8urDCmbGk7roZdm4NdDc_0yTUN_sgGP_bIiX8LA93aqdRTZXzIMibHWFvpAIXQ/w640-h374/Pack_Java.PNG)
+ ![enter image description here](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjf6V6OxJz1PYAiwTgX0oOmTiBnnUXcbG_TsJeMfnmLUShm-dg9a9fZn__rjKpjkji7XcipqJXyc4rtoE7CmZu5FLzcbLI-WxZ9bge-8w8W1H-vsGrkZfLP0ZRVa7KLt8LCzGCdLglxtoeBBo7G9AhLVjezRSiIixhDZrHhL8nkR_g81EGpfFJO2fKmNA/w640-h374/Pack_Java.PNG)
  
  ```
 Cucumber (Gherkin) Full Support
 ```
-  ![enter image description here](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgt6D-h80odPmRQmj62UJ6Rbl3hV9altbbI9n5wE9N34AkTEd_ayJ7KGaWNBnJSJZ8HS6qGTK5zPAsr38htLQ5CdUo0rYtwo6ZhkcK0cUCAxiUBVk9FadyYNQi2ZXd-Fgyo6PdzkUHpBrY38F-snLJuctIHuHpojaqWteJjcTYxByNTWhnbFVlTFYInuQ/w640-h264/Cucumber_Ext.PNG)
+  ![enter image description here](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhJ9_ljOrxrLIRfShmahTPZjHmRqEdmiQRB_frHxEgUWtqPLtCIj0ThuAdJ_ii5lgQQxMKUk2WH3ZatPCOAWYTrwiCZSfdJ4a4E9j8I5yonmBhBpZpol5XBFjuYjDL6ofDRCwz-nOaZ5Ay53QFoKX3BVDEloX7YalHcwD0mqI18VKLKWtUIEpc2Gbi4jg/w640-h264/Cucumber_Ext.PNG)
 	
 **Run the automated test**
 
