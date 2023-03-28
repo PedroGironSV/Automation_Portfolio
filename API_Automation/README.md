@@ -1,6 +1,6 @@
-﻿**Web Automation Project**
+﻿**REST APIs Automation Project**
 
-Verify items available to add to shopping cart on Amazon web page, using as automation stack the following technologies:
+Free testing APIs to perform the main HTTP requetests: GET, POST, PUT, PATCH and DELETE, using as automation stack the following technologies:
 
  - Postman
  - Newman command line
