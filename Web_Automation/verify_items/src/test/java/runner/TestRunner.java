@@ -23,8 +23,8 @@ public class TestRunner {
             BrowserActions.closeBrowser();
             String[] cmd = {"cmd.exe", "/c", " npm run report"};
             Runtime.getRuntime().exec(cmd);
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (IOException exception) {
+            exception.printStackTrace();
         }
     }
 }

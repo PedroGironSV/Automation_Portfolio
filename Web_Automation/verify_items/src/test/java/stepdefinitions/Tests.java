@@ -1,5 +1,8 @@
 package stepdefinitions;
 
+import java.io.File;
+
+import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 
 import actions.BrowserActions;
@@ -23,8 +26,12 @@ public class Tests extends BrowserActions {
 
     @Before
     public void setUpScenario(Scenario sc) {
-        this.scenario = sc;
-        
+        try{
+            this.scenario = sc;
+            FileUtils.cleanDirectory(new File("test/report/features/"));
+        }catch(Exception exception){
+            exception.printStackTrace();
+        }
     }
 
     @Given("I navigate to Amazon home page")
