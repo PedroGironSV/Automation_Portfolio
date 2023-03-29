@@ -49,7 +49,7 @@ node newman_runner.js
 
 ![enter image description here](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg0qGENh8Qucs6Wq0qkE5XNYVQuvy8nKBuTLXNMnQpthQWHgjXPOrQIHqy8yTYmhyHBDaXtffpBi2hcuVZJAksgoyBvOCxnS4VYHV6oQTM_xDTf-umBw-cxvTxJc7fXUKwFgGKCiZ3CLo6gvEPNInPy9-W8Lq_9e_bB9g864brDsd669a48Rbot8TEDew/w640-h356/5.Passed_Details.PNG)
 
- - Review single method details
+ - Review each HTTP request details
 
 ![enter image description here](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEga6c7KDZRlofVH4srXTqNSM2sNVe6046RIumR47jRWLdCcY_dscYVyx9u3KNfUnmVP1n0gr4Xa-fhA8caOZbbLGCaP9QD39PIFyPlZgJTiqw1F85MTaOiMEMJJULo6jg1vVo0ugGaYdcfyuRpSpwtDeGVzQAviN6xM1nTC34OSr9GSFry8D4MYhILSzg/w640-h586/6.Method_Details.PNG)
 
