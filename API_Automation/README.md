@@ -55,7 +55,7 @@ node newman_runner.js
 
  - Feel free to modify the Input Data for each HTTP Method and test different scenarios
 
-![enter image description here](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjPUXAdH3gpiZ09s923IjExE6dCFUv8GeKZnmxKP_820aQfMl_B5b4SU2duCPdg8mPQKsqU2K6m9docJyhMlO4evrEAl6W8HDzi_g5ax_3BkgbW3AVSljZVlAPyYNyyJlWEDxCl-yhxrDzolbmOaIF-KaVcd79EE9atzgvsxGkfHkSjJzdF4OkaB7GX8Q/w640-h386/7.Input_Data.PNG)
+![enter image description here](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhaCpvkuaJ9fl5IdNLN4roY_HUBukly_3ZpuuT_SfW4CqwS8RICkCDKsAmeLonK30R5qQX-GsYl1mXmck5ra5dJtQ5jrbd17GKUOj5t8UxF_k9BKsIWOoTRbu0gxgPZaHfXNEEX8XWzdD6o6B45XefC0ZRYvJcO4iP2kc-cL2yGD5oevivh5utsaRrGow/w640-h544/7.Input_Data.PNG)
 
  **Run API test using Postman**
  - Open the project on VS Code
