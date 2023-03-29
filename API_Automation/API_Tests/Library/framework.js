@@ -61,7 +61,6 @@ function retrieveTestScriptParameters() {
         try {
 
             setTimeout(function () {
-                let isFound = false;
                 let testParameters;
                 const jsonData = JSON.parse(postman.getGlobalVariable("testScriptData"));
                 testParameters = jsonData.mainHTTPMethods;
@@ -69,7 +68,6 @@ function retrieveTestScriptParameters() {
                     const values = testParameters[key];
                     Object.keys(values).forEach(k => {
                         postman.setGlobalVariable(k, values[k]);
-                        isFound = true;
                     });
                 });
             }, 2000);

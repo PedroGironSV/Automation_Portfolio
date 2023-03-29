@@ -30,7 +30,7 @@
 		},
 		{
 			"key": "all_users",
-			"value": "{{url_base}}/posts",
+			"value": "{{url_base}}/users",
 			"type": "default",
 			"enabled": true
 		},
@@ -42,7 +42,7 @@
 		},
 		{
 			"key": "update_user_by_id",
-			"value": "{{all_users}}/{{updateUserId}}",
+			"value": "{{all_users}}/{{updatedId}}",
 			"type": "default",
 			"enabled": true
 		},

@@ -1,26 +1,41 @@
 [
   {
-    "mainHTTPMethods":{
+    "mainHTTPMethods": {
       "getMethod": {
-        "searchSpecificUserId": 25
+        "searchSpecificUserId": 9
       },
       "postMethod": {
-        "newElementId": 101,
-        "newUserId": 101,
-        "newUserTitle": "POST method test",
-        "newUserBody": "Testing the creation of a new user"
+        "id": 11,
+        "name": "Pedro Giron",
+        "username": "pedro.giron",
+        "email": "pedro.giron1864@gmail.com",
+        "phone": "+503 7110 5316",
+        "linkedInProfile": "https://www.linkedin.com/in/pedrogiron/"
       },
       "putMethod": {
-        "updateUserId": 45,
-        "updateUserTitle": "PUT method test",
-        "updateUserBody": "Updating an user"
+        "updatedId": 3,
+        "updatedName": "Glenna Reichert",
+        "updatedUsername": "Delphine",
+        "updatedEmail": "Chaim_McDermott@dana.io",
+        "updatedStreet": "Dayna Park",
+        "updatedSuite": "Suite 449",
+        "updatedCity": "Bartholomebury",
+        "updatedZipcode": "76495-3109",
+        "updatedLat": "25.6463",
+        "updatedLng": "-167.8889",
+        "updatedPhone": "(775)976-6794",
+        "updatedWebsite": "conrad.com",
+        "updatedCompanyName": "Yost and Sons",
+        "updatedCatchPhrase": "Switchable contextually-based project",
+        "updatedBs": "aggregate real-time technologies"
       },
       "patchMethod": {
-        "partialUpdateUserTitle": "PATCH method test",
-        "partialUpdateUserBody": "Partial update of an user"
+        "partialUpdateUserId": 3,
+        "partialUpdateName": "Test User",
+        "partialUpdateUsername": "test.user"
       },
       "deleteMethod": {
-        "deleteUserId": 63
+        "deleteUserId": 11
       },
       "expectedResponseTime": {
         "maxAPIResponseTime": 500

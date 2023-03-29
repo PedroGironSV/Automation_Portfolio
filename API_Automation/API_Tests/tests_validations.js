@@ -101,7 +101,7 @@ function validateAllUsersTest(){
 
         let json = JSON.parse(responseBody);
         validateValue("Validate user's array is not empty", json.length > 0, true, true);
-        validateValue("Validate there are 100 users in response", json.length, 100, true);
+        validateValue("Validate there are 10 users in response", json.length, 10, true);
     }catch (error) {
 		console.log('validateAllUsersTest() - Error Caught: ' + error.message);
 	}
@@ -114,10 +114,15 @@ function validateSpecificUserTest(){
         checkResponseTime();
 
         let specificUser = JSON.parse(responseBody);
-        validateValue("Validate userId is a number", typeof specificUser.userId, "number", true);
-        validateValue("Validate element id is a number", typeof specificUser.id, "number", true);
-        validateValue("Validate title is a string", typeof specificUser.title, "string", true);
-        validateValue("Validate body is a string", typeof specificUser.body, "string", true);
+        validateValue("Validate userId :: "+ postman.getGlobalVariable("searchSpecificUserId"), specificUser.id, postman.getGlobalVariable("searchSpecificUserId"), true);
+        validateValue("Validate name", typeof specificUser.name, "string", true);
+        validateValue("Validate username", typeof specificUser.username, "string", true);
+        validateValue("Validate email", typeof specificUser.email, "string", true);
+        validateValue("Validate address information is present", !isUndefined(specificUser.address), true, true);
+        validateValue("Validate geo information is present", !isUndefined(specificUser.address.geo), true, true);
+        validateValue("Validate phone", !isUndefined(specificUser.phone), true, true);
+        validateValue("Validate website", !isUndefined(specificUser.website), true, true);
+        validateValue("Validate company information is present", !isUndefined(specificUser.company), true, true);
     }catch (error) {
 		console.log('validateSpecificUserTest() - Error Caught: ' + error.message);
 	}
@@ -130,40 +135,54 @@ function validateCreateNewUserTest(){
         checkResponseTime();
 
         let newUser = JSON.parse(responseBody);
-        validateValue("Validate userId :: "+ postman.getGlobalVariable("newUserId"), newUser.userId, postman.getGlobalVariable("newUserId"), true);
-        validateValue("Validate element id :: "+ postman.getGlobalVariable("newElementId"), newUser.id, postman.getGlobalVariable("newElementId"), true);
-        validateValue("Validate title :: "+ postman.getGlobalVariable("newUserTitle"), newUser.title, postman.getGlobalVariable("newUserTitle"), true);
-        validateValue("Validate body :: "+ postman.getGlobalVariable("newUserBody"), newUser.body, postman.getGlobalVariable("newUserBody"), true);
+        validateValue("Validate userId :: "+ postman.getGlobalVariable("id"), newUser.id, postman.getGlobalVariable("id"), true);
+        validateValue("Validate name :: "+ postman.getGlobalVariable("name"), newUser.name, postman.getGlobalVariable("name"), true);
+        validateValue("Validate username :: "+ postman.getGlobalVariable("username"), newUser.username, postman.getGlobalVariable("username"), true);
+        validateValue("Validate email :: "+ postman.getGlobalVariable("email"), newUser.email, postman.getGlobalVariable("email"), true);
+        validateValue("Validate linkedInProfile :: "+ postman.getGlobalVariable("linkedInProfile"), newUser.linkedInProfile, postman.getGlobalVariable("linkedInProfile"), true);
+
     }catch (error) {
 		console.log('validateCreateNewUserTest() - Error Caught: ' + error.message);
 	}
 }
 
-/* Validate PUT: Update partial user data */
+/* Validate PUT: Update All user data */
 function validateUserUpdateTest(){
     try{
         checkResponseCode(RESPONSE_CODE_200);
         checkResponseTime();
 
         let updatedUser = JSON.parse(responseBody);
-        validateValue("Validate userId :: "+ postman.getGlobalVariable("updateUserId"), updatedUser.userId, postman.getGlobalVariable("updateUserId"), true);
-        validateValue("Validate element id is valid ", !isUndefined(updatedUser.id), true, true);
-        validateValue("Validate title :: "+ postman.getGlobalVariable("updateUserTitle"), updatedUser.title, postman.getGlobalVariable("updateUserTitle"), true);
-        validateValue("Validate body :: "+ postman.getGlobalVariable("updateUserBody"), updatedUser.body, postman.getGlobalVariable("updateUserBody"), true);
+        validateValue("Validate userId :: "+ postman.getGlobalVariable("updatedId"), updatedUser.id, postman.getGlobalVariable("updatedId"), true);
+        validateValue("Validate name :: "+ postman.getGlobalVariable("updatedName"), updatedUser.name, postman.getGlobalVariable("updatedName"), true);
+        validateValue("Validate username :: "+ postman.getGlobalVariable("updatedUsername"), updatedUser.username, postman.getGlobalVariable("updatedUsername"), true);
+        validateValue("Validate email :: "+ postman.getGlobalVariable("updatedEmail"), updatedUser.email, postman.getGlobalVariable("updatedEmail"), true);
+        validateValue("Validate street :: "+ postman.getGlobalVariable("updatedStreet"), updatedUser.address.street, postman.getGlobalVariable("updatedStreet"), true);
+        validateValue("Validate suite :: "+ postman.getGlobalVariable("updatedSuite"), updatedUser.address.suite, postman.getGlobalVariable("updatedSuite"), true);
+        validateValue("Validate city :: "+ postman.getGlobalVariable("updatedCity"), updatedUser.address.city, postman.getGlobalVariable("updatedCity"), true);
+        validateValue("Validate zipcode :: "+ postman.getGlobalVariable("updatedZipcode"), updatedUser.address.zipcode, postman.getGlobalVariable("updatedZipcode"), true);
+        validateValue("Validate latitud :: "+ postman.getGlobalVariable("updatedLat"), updatedUser.address.geo.lat, postman.getGlobalVariable("updatedLat"), true);
+        validateValue("Validate longitud :: "+ postman.getGlobalVariable("updatedLng"), updatedUser.address.geo.lng, postman.getGlobalVariable("updatedLng"), true);
+        validateValue("Validate phone :: "+ postman.getGlobalVariable("updatedPhone"), updatedUser.phone, postman.getGlobalVariable("updatedPhone"), true);
+        validateValue("Validate website :: "+ postman.getGlobalVariable("updatedWebsite"), updatedUser.website, postman.getGlobalVariable("updatedWebsite"), true);
+        validateValue("Validate company name :: "+ postman.getGlobalVariable("updatedCompanyName"), updatedUser.company.name, postman.getGlobalVariable("updatedCompanyName"), true);
+        validateValue("Validate catchPhrase :: "+ postman.getGlobalVariable("updatedCatchPhrase"), updatedUser.company.catchPhrase, postman.getGlobalVariable("updatedCatchPhrase"), true);
+        validateValue("Validate bs :: "+ postman.getGlobalVariable("updatedBs"), updatedUser.company.bs, postman.getGlobalVariable("updatedBs"), true);
     }catch (error) {
 		console.log('validateUserUpdateTest() - Error Caught: ' + error.message);
 	}
 }
 
-/* Validate PATCH: Update All user data */
+/* Validate PATCH: Update partial user data */
 function validatePartialUserUpdateTest(){
     try{
         checkResponseCode(RESPONSE_CODE_200);
         checkResponseTime();
 
         let partialUpdatedUser = JSON.parse(responseBody);
-        validateValue("Validate title :: "+ postman.getGlobalVariable("partialUpdateUserTitle"), partialUpdatedUser.title, postman.getGlobalVariable("partialUpdateUserTitle"), true);
-        validateValue("Validate body :: "+ postman.getGlobalVariable("partialUpdateUserBody"), partialUpdatedUser.body, postman.getGlobalVariable("partialUpdateUserBody"), true);
+        validateValue("Validate userId :: "+ postman.getGlobalVariable("partialUpdateUserId"), partialUpdatedUser.id, postman.getGlobalVariable("partialUpdateUserId"), true);
+        validateValue("Validate name :: "+ postman.getGlobalVariable("partialUpdateName"), partialUpdatedUser.name, postman.getGlobalVariable("partialUpdateName"), true);
+        validateValue("Validate username :: "+ postman.getGlobalVariable("partialUpdateUsername"), partialUpdatedUser.username, postman.getGlobalVariable("partialUpdateUsername"), true);
     }catch (error) {
 		console.log('validatePartialUserUpdateTest() - Error Caught: ' + error.message);
 	}

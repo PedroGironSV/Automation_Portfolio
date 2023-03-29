@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "855ae140-b981-42e3-a37c-00bf4a68890f",
+		"_postman_id": "8928f2d8-1beb-4e9d-9547-7265e7851623",
 		"name": "API_TESTING",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "23157312"
@@ -270,7 +270,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\": {{newElementId}},\r\n    \"title\": \"{{newUserTitle}}\",\r\n    \"body\": \"{{newUserBody}}\",\r\n    \"userId\": {{newUserId}}\r\n}",
+					"raw": "{\r\n    \"id\": {{id}},\r\n    \"name\": \"{{name}}\",\r\n    \"username\": \"{{username}}\",\r\n    \"email\": \"{{email}}\",\r\n    \"phone\": \"{{phone}}\",\r\n    \"linkedInProfile\": \"{{linkedInProfile}}\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -314,7 +314,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"title\": \"{{updateUserTitle}}\",\r\n    \"body\": \"{{updateUserBody}}\",\r\n    \"userId\": {{updateUserId}}\r\n}",
+					"raw": "{\r\n    \"id\": {{updatedId}},\r\n    \"name\": \"{{updatedName}}\",\r\n    \"username\": \"{{updatedUsername}}\",\r\n    \"email\": \"{{updatedEmail}}\",\r\n    \"address\": {\r\n        \"street\": \"{{updatedStreet}}\",\r\n        \"suite\": \"{{updatedSuite}}\",\r\n        \"city\": \"{{updatedCity}}\",\r\n        \"zipcode\": \"{{updatedZipcode}}\",\r\n        \"geo\": {\r\n            \"lat\": \"{{updatedLat}}\",\r\n            \"lng\": \"{{updatedLng}}\"\r\n        }\r\n    },\r\n    \"phone\": \"{{updatedPhone}}\",\r\n    \"website\": \"{{updatedWebsite}}\",\r\n    \"company\": {\r\n        \"name\": \"{{updatedCompanyName}}\",\r\n        \"catchPhrase\": \"{{updatedCatchPhrase}}\",\r\n        \"bs\": \"{{updatedBs}}\"\r\n    }\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -322,9 +322,9 @@
 					}
 				},
 				"url": {
-					"raw": "{{update_user_by_id}}",
+					"raw": "{{update_post_by_id}}",
 					"host": [
-						"{{update_user_by_id}}"
+						"{{update_post_by_id}}"
 					]
 				}
 			},
@@ -358,7 +358,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"title\": \"{{partialUpdateUserTitle}}\",\r\n    \"body\": \"{{partialUpdateUserBody}}\"\r\n}",
+					"raw": "{\r\n    \"name\": \"{{partialUpdateName}}\",\r\n    \"username\": \"{{partialUpdateUsername}}\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
