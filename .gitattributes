@@ -1,0 +1,4 @@
+*.html linguistic-detectable=false
+*.java linguistic-detectable=true
+*.js linguistic-detectable=true
+*.json linguistic-detectable=true
