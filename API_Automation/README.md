@@ -41,18 +41,17 @@ node newman_runner.js
 
 ![enter image description here](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEihztXuRKM9rD6Err0Ff9fvIh45D1re763rqH_QOzVyoXGt0xVLNEgRe38tWbfZ3ektzy1JPwbFWaScac6fWc0sl-GH6ptifYkX1AAJafzN1R936bqpLwHRhv8AiT6bMG2alupHYz3-3x9-MLJsxIyw1jp1RitueuY2Dh6wIURvS73QH1FHwH8ZW28KjA/w640-h174/3.Wait_CLI_Execution.PNG)
 
- - Execute the test and wait until all of them are completed
  - Review the Execution Report generated with newman-reporter-htmlextra
 
-![enter image description here](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi0S46ak8SMvZxqTs0YS_JeScW02ljG82dMPTyhdr8fI6KCjVfvN0YtsfkTr3Xr2IUh0ovtnCYbZP12HQwzCdobrKxNYfGBy0IbGVzQb10-GJPhwg8XVadSpunVJYNtvo-PcvlrMa6p8emxhcYtMtf7Ox3zjcc_ikimHAw6aRH72SaXKXuBs2I3QhWh7g/w640-h446/4.Execution_Report.PNG)
+![enter image description here](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiRZpDTSg7nFTUJEmU8thr0KEbClA9PpwcxmnYyAUvEJYy6MZ2XRnEUMHH4iwRKdUdrehcPPcnGg4t6QxlPl9uHFF4RTm-J7D7oR7G64Z2U2HLaTnH8mZ_Y9UbpkJZzWKb7l8QGs57lb42PVnXCEzFUXCUL1lTkrSULEikw3hq8YiPwqqk2BBEjFihDUg/w640-h434/4.Execution_Report.PNG)
 
  - Tests executed general view
 
 ![enter image description here](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg0qGENh8Qucs6Wq0qkE5XNYVQuvy8nKBuTLXNMnQpthQWHgjXPOrQIHqy8yTYmhyHBDaXtffpBi2hcuVZJAksgoyBvOCxnS4VYHV6oQTM_xDTf-umBw-cxvTxJc7fXUKwFgGKCiZ3CLo6gvEPNInPy9-W8Lq_9e_bB9g864brDsd669a48Rbot8TEDew/w640-h356/5.Passed_Details.PNG)
 
- - Review single method details
+ - Review each HTTP request details
 
-![enter image description here](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhW4p6AZ3oyGiZN2kk8znQIpAOXPkyNHiVpCcLCHfeM5kvi0Uqq3Okm7feJz4ZMrQlDXCD1oRhioDB95ykmGsch-uaDymIUiRSMN59WQfvzINp49NMFn1rjpObnQzdLQLyatjC4TcZVKk5vDhdEuXBT4ie4kvY8wn536-_78411SwE9Dl-uB1l8OAbB2Q/w640-h578/6.Method_Details.PNG)
+![enter image description here](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEga6c7KDZRlofVH4srXTqNSM2sNVe6046RIumR47jRWLdCcY_dscYVyx9u3KNfUnmVP1n0gr4Xa-fhA8caOZbbLGCaP9QD39PIFyPlZgJTiqw1F85MTaOiMEMJJULo6jg1vVo0ugGaYdcfyuRpSpwtDeGVzQAviN6xM1nTC34OSr9GSFry8D4MYhILSzg/w640-h586/6.Method_Details.PNG)
 
  - Feel free to modify the Input Data for each HTTP Method and test different scenarios
 
@@ -102,9 +101,9 @@ node postman_server.js
 
  - Wait for the execution ends to see the execution's results
 
-![enter image description here](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiwFM_ZZRKvhKOeKIzqcZ2uHx8a3mpvEqTZM9LbUwIEDxdQGl58tQag-96ud8kGuZ2H0Ws4SKhxH8sOHmP_0qgFfB0MEQYrH8_rWyq_wKIARZ2SaeX3Q6fZ3GD1DDDWFQGpRElIuuQrPqI_UoqbcYMbDr2QTQvnLToOFHf8JYGmzGNARjEFXUQrfefwuA/w640-h342/7.Review_Execution_Results.PNG)
+![enter image description here](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjjhjLRSssTz0IdsVvz2QFR8jZigBUaYEdd1OnuXF0c5POOhVWI8TGPSh_V81vOGWpfq-zmtjyvtsxeKo7U6PtLYeo_rzBOQB5KKvqQXD0bvFn4El2GCiLKMb-wPAjIlaZbU9rTsKjHOvn2mVBz3RYkVusXikgQbjMtbcjyVk4JA4oDom46liwhkYTrNA/w640-h332/7.Review_Execution_Results.PNG)
 
  - You can also review each method's request and run them separately
 
-![enter image description here](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi-MRuz4_ONX7pe6S_rj966uhDutcvKqSv0U8_KTGqXdw_iMzIL3o1lJZLG7XT5wT7lSu0dc16lpSiADST-DpJvXazyP4RXfeDACj1e6TwfUHxgzUVQf88-8NWF_Ibmy0wE39J00M88WyGXvuZVPJyQa43OL7S0-cHFfQgLPjEQY9g2SLl_fDosmSISIg/w640-h252/8.Review_Single_Method.PNG)
+![enter image description here](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgsrFVD4fNIPR3KvRuyiPfddy1EggPgcCfF0JFIQAge7MGQZlfLgM1gBJU8ydZvPkl0-qM3AcVq70Xsl6lntI_GW06kDkN1Z_NpFvm5_ChjDxmgCaYewl2M8aNwRQCG2wHDYfx6mZrFkvVLbin01YdpFW3KZHFBxWiqChfloG_FR2xEh9oiEpyY0BD3FQ/w640-h234/8.Review_Single_Method.PNG)
 
