@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "8928f2d8-1beb-4e9d-9547-7265e7851623",
+		"_postman_id": "6beed114-7ce8-4313-94f6-2cb41b076b66",
 		"name": "API_TESTING",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "23157312"
+		"_exporter_id": "26718690"
 	},
 	"item": [
 		{
@@ -322,9 +322,9 @@
 					}
 				},
 				"url": {
-					"raw": "{{update_post_by_id}}",
+					"raw": "{{update_user_by_id}}",
 					"host": [
-						"{{update_post_by_id}}"
+						"{{update_user_by_id}}"
 					]
 				}
 			},
