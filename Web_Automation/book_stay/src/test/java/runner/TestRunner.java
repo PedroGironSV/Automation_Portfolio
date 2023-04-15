@@ -1,11 +1,7 @@
 package runner;
 
-import java.io.IOException;
-
-import org.junit.AfterClass;
 import org.junit.runner.RunWith;
 
-import actions.BrowserActions;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
