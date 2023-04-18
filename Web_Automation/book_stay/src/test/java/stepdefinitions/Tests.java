@@ -6,6 +6,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 import actions.BrowserActions;
+import actions.ReservationType;
 import driver.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -88,9 +89,38 @@ public class Tests extends BrowserActions {
         }
     }
 
-    @When("I look for {int} room(s) for {int} adult(s) and {int} kid(children)")
+    @When("I look for {int} rooms for {int} adults and {int} children")
     public void lookForRoomsAdultsChildren(int rooms, int adults, int children) {
+        click(home.getOccupancyConfig());
+        fluentWait(home.getAdultsCount());
+        int currentAdults = Integer.parseInt(getCurrentCount(home.getAdultsCount(), ReservationType.ADULTS));
+        int currentChildren = Integer.parseInt(getCurrentCount(home.getChildrenCount(), ReservationType.CHILDREN));
+        int currentRooms = Integer.parseInt(getCurrentCount(home.getRoomsCount(), ReservationType.ROOMS));
+        if(currentAdults < adults){
+            while(currentAdults < adults){
+                increase(home.getIncreaseAdults(), ReservationType.ADULTS);
+                currentAdults = Integer.parseInt(getCurrentCount(home.getAdultsCount(), ReservationType.ADULTS));
+                System.out.println("currentAdults: "+ currentAdults + "  | target: "+ adults);
+            }
+        }else{
+            while(currentAdults > adults){
+                reduce(home.getReduceAdults(), ReservationType.ADULTS);
+                currentAdults = Integer.parseInt(getCurrentCount(home.getAdultsCount(), ReservationType.ADULTS));
+                System.out.println("currentAdults: "+ currentAdults + "  | target: "+ adults);
+            }
+        }
 
+        /* if(currentChildren < children){
+            while(currentChildren < children){
+                increase(home.getIncreaseCount(), ReservationType.CHILDREN);
+                currentChildren = Integer.parseInt(getCurrentCount(home.getCurrentCount(), ReservationType.CHILDREN));
+            }
+        }else{
+            while(currentChildren > children){
+                reduce(home.getIncreaseCount(), ReservationType.CHILDREN);
+                currentChildren = Integer.parseInt(getCurrentCount(home.getCurrentCount(), ReservationType.CHILDREN));
+            }
+        } */
     }
 
     @And("I select a stay with {string} evaluation")

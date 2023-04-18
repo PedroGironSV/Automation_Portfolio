@@ -40,6 +40,37 @@ public class BrowserActions {
         Driver.getDriver().findElement(locator).click();
     }
 
+    public void increase(By locator, ReservationType type){
+        WebElement increaseCount = Driver.getDriver().findElement(locator);
+        switch(type){
+            case ADULTS: increaseCount.click();
+            case CHILDREN: increaseCount.click();
+            case ROOMS: increaseCount.click();
+        }
+    }
+
+    public void reduce(By locator, ReservationType type){
+        WebElement reduceCount = Driver.getDriver().findElement(locator);
+        switch(type){
+            case ADULTS: reduceCount.click();
+            case CHILDREN: reduceCount.click();
+            case ROOMS: reduceCount.click();
+        }
+    }
+
+    public String getCurrentCount(By locator, ReservationType type){
+        WebElement count = Driver.getDriver().findElement(locator);
+        switch(type){
+            case ADULTS:
+                return count.getAttribute("innerText");
+            case CHILDREN: 
+                return count.getAttribute("innerText");
+            case ROOMS: 
+                return count.getAttribute("innerText");
+            default: return "";
+        }
+    }
+
     public void type(By locator, String text){
         Driver.getDriver().findElement(locator).sendKeys(text);
     }
