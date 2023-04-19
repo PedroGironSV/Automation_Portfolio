@@ -43,30 +43,27 @@ public class BrowserActions {
     public void increase(By locator, ReservationType type){
         WebElement increaseCount = Driver.getDriver().findElement(locator);
         switch(type){
-            case ADULTS: increaseCount.click();
-            case CHILDREN: increaseCount.click();
-            case ROOMS: increaseCount.click();
+            case ADULTS: increaseCount.click(); break;
+            case CHILDREN: increaseCount.click(); break;
+            case ROOMS: increaseCount.click(); break;
         }
     }
 
     public void reduce(By locator, ReservationType type){
         WebElement reduceCount = Driver.getDriver().findElement(locator);
         switch(type){
-            case ADULTS: reduceCount.click();
-            case CHILDREN: reduceCount.click();
-            case ROOMS: reduceCount.click();
+            case ADULTS: reduceCount.click(); break;
+            case CHILDREN: reduceCount.click(); break;
+            case ROOMS: reduceCount.click(); break;
         }
     }
 
     public String getCurrentCount(By locator, ReservationType type){
         WebElement count = Driver.getDriver().findElement(locator);
         switch(type){
-            case ADULTS:
-                return count.getAttribute("innerText");
-            case CHILDREN: 
-                return count.getAttribute("innerText");
-            case ROOMS: 
-                return count.getAttribute("innerText");
+            case ADULTS: return count.getAttribute("innerText");
+            case CHILDREN: return count.getAttribute("innerText");
+            case ROOMS: return count.getAttribute("innerText");
             default: return "";
         }
     }

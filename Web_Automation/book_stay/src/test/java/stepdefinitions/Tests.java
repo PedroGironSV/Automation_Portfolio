@@ -100,27 +100,37 @@ public class Tests extends BrowserActions {
             while(currentAdults < adults){
                 increase(home.getIncreaseAdults(), ReservationType.ADULTS);
                 currentAdults = Integer.parseInt(getCurrentCount(home.getAdultsCount(), ReservationType.ADULTS));
-                System.out.println("currentAdults: "+ currentAdults + "  | target: "+ adults);
             }
         }else{
             while(currentAdults > adults){
                 reduce(home.getReduceAdults(), ReservationType.ADULTS);
                 currentAdults = Integer.parseInt(getCurrentCount(home.getAdultsCount(), ReservationType.ADULTS));
-                System.out.println("currentAdults: "+ currentAdults + "  | target: "+ adults);
             }
         }
 
-        /* if(currentChildren < children){
+        if(currentChildren < children){
             while(currentChildren < children){
-                increase(home.getIncreaseCount(), ReservationType.CHILDREN);
-                currentChildren = Integer.parseInt(getCurrentCount(home.getCurrentCount(), ReservationType.CHILDREN));
+                increase(home.getIncreaseChildren(), ReservationType.CHILDREN);
+                currentChildren = Integer.parseInt(getCurrentCount(home.getChildrenCount(), ReservationType.CHILDREN));
             }
         }else{
             while(currentChildren > children){
-                reduce(home.getIncreaseCount(), ReservationType.CHILDREN);
-                currentChildren = Integer.parseInt(getCurrentCount(home.getCurrentCount(), ReservationType.CHILDREN));
+                reduce(home.getReduceChildren(), ReservationType.CHILDREN);
+                currentChildren = Integer.parseInt(getCurrentCount(home.getChildrenCount(), ReservationType.CHILDREN));
             }
-        } */
+        }
+
+        if(currentRooms < rooms){
+            while(currentRooms < rooms){
+                increase(home.getIncreaseRooms(), ReservationType.ROOMS);
+                currentRooms = Integer.parseInt(getCurrentCount(home.getRoomsCount(), ReservationType.ROOMS));
+            }
+        }else{
+            while(currentRooms > rooms){
+                reduce(home.getReduceRooms(), ReservationType.ROOMS);
+                currentRooms = Integer.parseInt(getCurrentCount(home.getRoomsCount(), ReservationType.ROOMS));
+            }
+        }
     }
 
     @And("I select a stay with {string} evaluation")

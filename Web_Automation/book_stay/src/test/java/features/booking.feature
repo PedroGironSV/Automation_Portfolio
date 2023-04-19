@@ -13,4 +13,4 @@ Feature: Book a stay
         And I check the details of the selected accommodation
         Examples:
             | firstName | lastName | destination | evaluation | checkInDate | checkOutDate | rooms | adults | children | email              |
-            | Pedro     | Giron    | Las Vegas   | Exellent   | 18/04/2023  | 09/05/2023   | 1     | 3     | 0        | testmail@gmail.com |
+            | Pedro     | Giron    | Las Vegas   | Exellent   | 15/05/2023  | 05/06/2023   | 2     | 4      | 0        | testmail@gmail.com |

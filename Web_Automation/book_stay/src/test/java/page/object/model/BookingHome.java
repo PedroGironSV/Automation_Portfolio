@@ -26,8 +26,8 @@ public class BookingHome implements ISetUpWebElements{
         increaseAdults = By.cssSelector("div:nth-child(1) > div.e98c626f34 > button.fc63351294.a822bdf511.e3c025e003.fa565176a8.f7db01295e.c334e6f658.e1b7cfea84.d64a4ea64d");
         reduceChildren = By.cssSelector("div:nth-child(2) > div.e98c626f34 > button.fc63351294.a822bdf511.e3c025e003.fa565176a8.f7db01295e.c334e6f658.e1b7cfea84.cd7aa7c891");
         increaseChildren = By.cssSelector("div:nth-child(2) > div.e98c626f34 > button.fc63351294.a822bdf511.e3c025e003.fa565176a8.f7db01295e.c334e6f658.e1b7cfea84.d64a4ea64d");
-        reduceRooms = By.cssSelector("div:nth-child(5) > div.e98c626f34 > button.fc63351294.a822bdf511.e3c025e003.fa565176a8.f7db01295e.c334e6f658.e1b7cfea84.cd7aa7c891");
-        increaseRooms = By.cssSelector("div:nth-child(5) > div.e98c626f34 > button.fc63351294.a822bdf511.e3c025e003.fa565176a8.f7db01295e.c334e6f658.e1b7cfea84.d64a4ea64d");
+        reduceRooms = By.cssSelector("div:nth-child(3) > div.e98c626f34 > button.fc63351294.a822bdf511.e3c025e003.fa565176a8.f7db01295e.c334e6f658.e1b7cfea84.cd7aa7c891");
+        increaseRooms = By.cssSelector("div:nth-child(3) > div.e98c626f34 > button.fc63351294.a822bdf511.e3c025e003.fa565176a8.f7db01295e.c334e6f658.e1b7cfea84.d64a4ea64d");
         done = By.cssSelector("button.fc63351294.a822bdf511.e2b4ffd73d.f7db01295e.c938084447.a9a04704ee.d285d0ebe9");
 
     }
