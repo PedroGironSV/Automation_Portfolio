@@ -5,8 +5,8 @@ import org.openqa.selenium.By;
 public class BookingHome implements ISetUpWebElements{
     
     private By geniusExit, destination, monthYear, checkInDay, checkOutDay, calendar, nextCoupleMonths, calendarTable;
-    private By  occupancyConfig, done, adultsCount, childrenCount, roomsCount;
-    private By reduceAdults, increaseAdults, reduceChildren, increaseChildren, reduceRooms, increaseRooms;
+    private By  occupancyConfig, done, adultsCount, roomsCount;
+    private By reduceAdults, increaseAdults, reduceRooms, increaseRooms;
 
     @Override
     public void setUpWebElements() {
@@ -19,13 +19,10 @@ public class BookingHome implements ISetUpWebElements{
         occupancyConfig = By.cssSelector("button.d47738b911.b7d08821c3");
 
         adultsCount = By.cssSelector("div:nth-child(1) > div.e98c626f34 > span");
-        childrenCount = By.cssSelector("div:nth-child(2) > div.e98c626f34 > span");
         roomsCount = By.cssSelector("div:nth-child(3) > div.e98c626f34 > span");
 
         reduceAdults = By.cssSelector("div:nth-child(1) > div.e98c626f34 > button.fc63351294.a822bdf511.e3c025e003.fa565176a8.f7db01295e.c334e6f658.e1b7cfea84.cd7aa7c891");
         increaseAdults = By.cssSelector("div:nth-child(1) > div.e98c626f34 > button.fc63351294.a822bdf511.e3c025e003.fa565176a8.f7db01295e.c334e6f658.e1b7cfea84.d64a4ea64d");
-        reduceChildren = By.cssSelector("div:nth-child(2) > div.e98c626f34 > button.fc63351294.a822bdf511.e3c025e003.fa565176a8.f7db01295e.c334e6f658.e1b7cfea84.cd7aa7c891");
-        increaseChildren = By.cssSelector("div:nth-child(2) > div.e98c626f34 > button.fc63351294.a822bdf511.e3c025e003.fa565176a8.f7db01295e.c334e6f658.e1b7cfea84.d64a4ea64d");
         reduceRooms = By.cssSelector("div:nth-child(3) > div.e98c626f34 > button.fc63351294.a822bdf511.e3c025e003.fa565176a8.f7db01295e.c334e6f658.e1b7cfea84.cd7aa7c891");
         increaseRooms = By.cssSelector("div:nth-child(3) > div.e98c626f34 > button.fc63351294.a822bdf511.e3c025e003.fa565176a8.f7db01295e.c334e6f658.e1b7cfea84.d64a4ea64d");
         done = By.cssSelector("button.fc63351294.a822bdf511.e2b4ffd73d.f7db01295e.c938084447.a9a04704ee.d285d0ebe9");
@@ -80,10 +77,6 @@ public class BookingHome implements ISetUpWebElements{
         return adultsCount;
     }
 
-    public By getChildrenCount() {
-        return childrenCount;
-    }
-
     public By getRoomsCount() {
         return roomsCount;
     }
@@ -94,14 +87,6 @@ public class BookingHome implements ISetUpWebElements{
 
     public By getIncreaseAdults() {
         return increaseAdults;
-    }
-
-    public By getReduceChildren() {
-        return reduceChildren;
-    }
-
-    public By getIncreaseChildren() {
-        return increaseChildren;
     }
 
     public By getReduceRooms() {

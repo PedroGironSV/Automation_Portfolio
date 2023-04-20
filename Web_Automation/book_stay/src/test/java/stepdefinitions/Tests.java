@@ -89,12 +89,11 @@ public class Tests extends BrowserActions {
         }
     }
 
-    @When("I look for {int} rooms for {int} adults and {int} children")
-    public void lookForRoomsAdultsChildren(int rooms, int adults, int children) {
+    @When("I look for {int} rooms and {int} adults")
+    public void lookForRoomsAdultsChildren(int rooms, int adults) {
         click(home.getOccupancyConfig());
         fluentWait(home.getAdultsCount());
         int currentAdults = Integer.parseInt(getCurrentCount(home.getAdultsCount(), ReservationType.ADULTS));
-        int currentChildren = Integer.parseInt(getCurrentCount(home.getChildrenCount(), ReservationType.CHILDREN));
         int currentRooms = Integer.parseInt(getCurrentCount(home.getRoomsCount(), ReservationType.ROOMS));
         if(currentAdults < adults){
             while(currentAdults < adults){
@@ -105,18 +104,6 @@ public class Tests extends BrowserActions {
             while(currentAdults > adults){
                 reduce(home.getReduceAdults(), ReservationType.ADULTS);
                 currentAdults = Integer.parseInt(getCurrentCount(home.getAdultsCount(), ReservationType.ADULTS));
-            }
-        }
-
-        if(currentChildren < children){
-            while(currentChildren < children){
-                increase(home.getIncreaseChildren(), ReservationType.CHILDREN);
-                currentChildren = Integer.parseInt(getCurrentCount(home.getChildrenCount(), ReservationType.CHILDREN));
-            }
-        }else{
-            while(currentChildren > children){
-                reduce(home.getReduceChildren(), ReservationType.CHILDREN);
-                currentChildren = Integer.parseInt(getCurrentCount(home.getChildrenCount(), ReservationType.CHILDREN));
             }
         }
 

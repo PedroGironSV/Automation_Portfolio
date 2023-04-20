@@ -6,11 +6,11 @@ Feature: Book a stay
         Given I navigate to Booking.com home page
         And I choose "<destination>" as destination
         And I set the period of stay from "<checkInDate>" to "<checkOutDate>"
-        When I look for <rooms> rooms for <adults> adults and <children> children
+        When I look for <rooms> rooms and <adults> adults
         And I select a stay with "<evaluation>" evaluation
         And I select the option I want to book
         Then I complete the details firts name:"<firstName>", last name:"<lastName>" and email:"<email>"
         And I check the details of the selected accommodation
         Examples:
-            | firstName | lastName | destination | evaluation | checkInDate | checkOutDate | rooms | adults | children | email              |
-            | Pedro     | Giron    | Las Vegas   | Exellent   | 15/05/2023  | 05/06/2023   | 2     | 4      | 0        | testmail@gmail.com |
+            | firstName | lastName | destination | evaluation | checkInDate | checkOutDate | rooms | adults | email              |
+            | Pedro     | Giron    | Las Vegas   | Exellent   | 15/05/2023  | 05/06/2023   | 3     | 6      | testmail@gmail.com |
