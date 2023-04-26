@@ -118,6 +118,9 @@ public class Tests extends BrowserActions {
                 currentRooms = Integer.parseInt(getCurrentCount(home.getRoomsCount(), ReservationType.ROOMS));
             }
         }
+        click(home.getDone());
+        implicitWait();
+        click(home.getSearch());
     }
 
     @And("I select a stay with {string} evaluation")
