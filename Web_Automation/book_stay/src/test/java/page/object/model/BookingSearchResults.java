@@ -8,7 +8,7 @@ public class BookingSearchResults implements ISetUpWebElements{
 
     @Override
     public void setUpWebElements() {
-        destinationLabel = By.cssSelector("div.b3d1cacd40.d5f78961c3.a2cb913cd1 > h1");
+        destinationLabel = By.xpath("//h1[contains(text(), 'properties')]");
     }
 
     public void setEvaluationType(String evaluation){

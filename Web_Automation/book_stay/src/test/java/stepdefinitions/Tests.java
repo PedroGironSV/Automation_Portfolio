@@ -14,11 +14,13 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import page.object.model.BookingHome;
 import page.object.model.BookingSearchResults;
+import page.object.model.BookingStayDetails;
 
 public class Tests extends BrowserActions {
 
     BookingHome home = new BookingHome();
     BookingSearchResults searchResults = new BookingSearchResults();
+    BookingStayDetails stayDetails = new BookingStayDetails();
 
     @Given("I navigate to Booking.com home page")
     public void navigateToBookingHomePage() {
@@ -137,6 +139,12 @@ public class Tests extends BrowserActions {
     public void selectOptionToBook(String evaluation) {
         searchResults.setAvailability(evaluation);
         click(searchResults.getAvailability());
+        switchToWindow(1);
+        stayDetails.setUpWebElements();
+        fluentWait(stayDetails.getGallery());
+        scrollToElement(stayDetails.getSelectRooms());
+        selectOptionDropdown(stayDetails.getSelectRooms(), 4);
+        click(stayDetails.getReserveButton());
     }
 
     @Then("I complete the details firts name:{string}, last name:{string} and email:{string}")

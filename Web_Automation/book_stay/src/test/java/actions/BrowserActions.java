@@ -1,6 +1,7 @@
 package actions;
 
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
@@ -11,6 +12,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -80,14 +82,6 @@ public class BrowserActions {
         Driver.getDriver().findElement(locator).sendKeys(text);
     }
 
-    public void cleanInputBox(By locator) {
-        Driver.getDriver().findElement(locator).clear();
-    }
-
-    public boolean isWebElementDisplayed(By locator) {
-        return Driver.getDriver().findElement(locator).isDisplayed();
-    }
-
     public void scrollToElement(By locator) {
         WebElement element = Driver.getDriver().findElement(locator);
         ((JavascriptExecutor) Driver.getDriver()).executeScript(
@@ -96,6 +90,17 @@ public class BrowserActions {
 
     public String getTextFromElement(By locator) {
         return Driver.getDriver().findElement(locator).getAttribute("innerText");
+    }
+
+    public void switchToWindow(int windowIndex) {
+        ArrayList<String> windowHandles = new ArrayList<>(Driver.getDriver().getWindowHandles());
+        Driver.getDriver().switchTo().window(windowHandles.get(windowIndex));
+    }
+
+    public void selectOptionDropdown(By locator, int index) {
+        WebElement dropdown = Driver.getDriver().findElement(locator);
+        Select select = new Select(dropdown);
+        select.selectByIndex(index);
     }
 
     public void markElement(By locator) {
