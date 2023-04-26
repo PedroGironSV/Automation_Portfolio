@@ -12,6 +12,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import page.object.model.BookingCheckAccomodation;
 import page.object.model.BookingHome;
 import page.object.model.BookingSearchResults;
 import page.object.model.BookingStayDetails;
@@ -23,6 +24,7 @@ public class Tests extends BrowserActions {
     BookingSearchResults searchResults = new BookingSearchResults();
     BookingStayDetails stayDetails = new BookingStayDetails();
     BookingYourDetails yourDetails = new BookingYourDetails();
+    BookingCheckAccomodation accomodation = new BookingCheckAccomodation();
 
     @Given("I navigate to Booking.com home page")
     public void navigateToBookingHomePage() {
@@ -145,7 +147,7 @@ public class Tests extends BrowserActions {
         stayDetails.setUpWebElements();
         fluentWait(stayDetails.getGallery());
         scrollToElement(stayDetails.getSelectRooms());
-        selectOptionDropdown(stayDetails.getSelectRooms(), 4);
+        selectOptionDropdown(stayDetails.getSelectRooms(), 1);
         click(stayDetails.getReserveButton());
     }
 
@@ -162,6 +164,9 @@ public class Tests extends BrowserActions {
 
     @And("I check the details of the selected accommodation")
     public void checkAccommodationDetails() {
-
+        accomodation.setUpWebElements();
+        fluentWait(accomodation.getDetailsLabel());
+        click(accomodation.getCheckBooking());
+        fluentWait(accomodation.getDetailsForm());
     }
 }
