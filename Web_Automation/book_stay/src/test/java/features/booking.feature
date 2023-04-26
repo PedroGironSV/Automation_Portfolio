@@ -7,8 +7,8 @@ Feature: Book a stay
         And I choose "<destination>" as destination
         And I set the period of stay from "<checkInDate>" to "<checkOutDate>"
         When I look for <rooms> rooms and <adults> adults
-        And I select a stay with "<evaluation>" evaluation
-        And I select the option I want to book
+        And I scroll to a stay with "<evaluation>" evaluation
+        And I select the option I want to book with "<evaluation>"
         Then I complete the details firts name:"<firstName>", last name:"<lastName>" and email:"<email>"
         And I check the details of the selected accommodation
         Examples:

@@ -125,19 +125,18 @@ public class Tests extends BrowserActions {
         click(home.getSearch());
     }
 
-    @And("I select a stay with {string} evaluation")
+    @And("I scroll to a stay with {string} evaluation")
     public void selectStayWithEvaluation(String evaluation) {
         searchResults.setUpWebElements();
         fluentWait(searchResults.getDestinationLabel());
         searchResults.setEvaluationType(evaluation);
         scrollToElement(searchResults.getEvaluationType());
-        searchResults.setAvailability(evaluation);
-        click(searchResults.getAvailability());
     }
 
-    @And("I select the option I want to book")
-    public void selectOptionToBook() {
-
+    @And("I select the option I want to book with {string}")
+    public void selectOptionToBook(String evaluation) {
+        searchResults.setAvailability(evaluation);
+        click(searchResults.getAvailability());
     }
 
     @Then("I complete the details firts name:{string}, last name:{string} and email:{string}")
