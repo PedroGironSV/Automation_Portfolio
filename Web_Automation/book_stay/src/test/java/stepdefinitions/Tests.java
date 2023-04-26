@@ -15,12 +15,14 @@ import io.cucumber.java.en.When;
 import page.object.model.BookingHome;
 import page.object.model.BookingSearchResults;
 import page.object.model.BookingStayDetails;
+import page.object.model.BookingYourDetails;
 
 public class Tests extends BrowserActions {
 
     BookingHome home = new BookingHome();
     BookingSearchResults searchResults = new BookingSearchResults();
     BookingStayDetails stayDetails = new BookingStayDetails();
+    BookingYourDetails yourDetails = new BookingYourDetails();
 
     @Given("I navigate to Booking.com home page")
     public void navigateToBookingHomePage() {
@@ -149,7 +151,13 @@ public class Tests extends BrowserActions {
 
     @Then("I complete the details firts name:{string}, last name:{string} and email:{string}")
     public void completeDetails(String firstName, String lastName, String email) {
-
+        yourDetails.setUpWebElements();
+        fluentWait(yourDetails.getDetailsLabel());
+        scrollToElement(yourDetails.getDetailsForm());
+        type(yourDetails.getFirstName(), firstName);
+        type(yourDetails.getLastName(), lastName);
+        type(yourDetails.getEmail(), email);
+        click(yourDetails.getFinalDetails());
     }
 
     @And("I check the details of the selected accommodation")
