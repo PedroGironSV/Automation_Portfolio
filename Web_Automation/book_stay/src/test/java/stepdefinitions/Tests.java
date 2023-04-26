@@ -13,10 +13,12 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import page.object.model.BookingHome;
+import page.object.model.BookingSearchResults;
 
 public class Tests extends BrowserActions {
 
     BookingHome home = new BookingHome();
+    BookingSearchResults searchResults = new BookingSearchResults();
 
     @Given("I navigate to Booking.com home page")
     public void navigateToBookingHomePage() {
@@ -125,7 +127,12 @@ public class Tests extends BrowserActions {
 
     @And("I select a stay with {string} evaluation")
     public void selectStayWithEvaluation(String evaluation) {
-
+        searchResults.setUpWebElements();
+        fluentWait(searchResults.getDestinationLabel());
+        searchResults.setEvaluationType(evaluation);
+        scrollToElement(searchResults.getEvaluationType());
+        searchResults.setAvailability(evaluation);
+        click(searchResults.getAvailability());
     }
 
     @And("I select the option I want to book")
