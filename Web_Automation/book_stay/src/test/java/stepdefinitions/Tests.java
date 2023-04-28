@@ -1,13 +1,18 @@
 package stepdefinitions;
 
+import java.io.File;
 import java.text.DateFormatSymbols;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
+import org.apache.commons.io.FileUtils;
+
 import actions.BrowserActions;
 import actions.ReservationType;
 import driver.Driver;
+import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -25,6 +30,17 @@ public class Tests extends BrowserActions {
     BookingStayDetails stayDetails = new BookingStayDetails();
     BookingYourDetails yourDetails = new BookingYourDetails();
     BookingCheckAccomodation accomodation = new BookingCheckAccomodation();
+    Scenario scenario;
+
+    @Before
+    public void setUpScenario(Scenario sc) {
+        try{
+            this.scenario = sc;
+            FileUtils.cleanDirectory(new File("test/report/features/"));
+        }catch(Exception exception){
+            exception.printStackTrace();
+        }
+    }
 
     @Given("I navigate to Booking.com home page")
     public void navigateToBookingHomePage() {
