@@ -2,9 +2,9 @@
   "name": "verify_items",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "verify_items-report.js",
   "scripts": {
-    "report": "node index.js"
+    "report": "node verify_items-report.js"
   },
   "author": "Pedro Giron",
   "license": "ISC",
