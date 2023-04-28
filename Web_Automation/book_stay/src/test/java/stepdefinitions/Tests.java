@@ -48,12 +48,15 @@ public class Tests extends BrowserActions {
         home.setUpWebElements();
         fluentWait(home.getGeniusExit());
         click(home.getGeniusExit());
+        takeScreenShot(scenario);
     }
 
     @And("I choose {string} as destination")
     public void chooseDestination(String destination) {
         explicitWait(home.getDestination());
         type(home.getDestination(), destination);
+        markElement(home.getDestination());
+        takeScreenShot(scenario);
     }
 
     @And("I set the period of stay from {string} to {string}")
@@ -108,6 +111,8 @@ public class Tests extends BrowserActions {
             home.setCheckOutDay(dataDateOut.toString());
             fluentWait(home.getCheckOutDay());
             click(home.getCheckOutDay());
+            markElement(home.calendarTable());
+            takeScreenShot(scenario);
         } catch (ParseException parseException) {
             System.err.println("Parse Exception: " + parseException);
         }
@@ -143,6 +148,8 @@ public class Tests extends BrowserActions {
             }
         }
         click(home.getDone());
+        markElement(home.getOccupancyConfig());
+        takeScreenShot(scenario);
         implicitWait();
         click(home.getSearch());
     }
@@ -153,9 +160,11 @@ public class Tests extends BrowserActions {
         fluentWait(searchResults.getDestinationLabel());
         searchResults.setEvaluationType(evaluation);
         scrollToElement(searchResults.getEvaluationType());
+        markElement(searchResults.getEvaluationType());
+        takeScreenShot(scenario);
     }
 
-    @And("I select the option I want to book with {string}")
+    @And("I select the option I want to book with {string} evaluation")
     public void selectOptionToBook(String evaluation) {
         searchResults.setAvailability(evaluation);
         click(searchResults.getAvailability());
@@ -164,6 +173,9 @@ public class Tests extends BrowserActions {
         fluentWait(stayDetails.getGallery());
         scrollToElement(stayDetails.getSelectRooms());
         selectOptionDropdown(stayDetails.getSelectRooms(), 1);
+        markElement(stayDetails.getSelectRooms());
+        markElement(stayDetails.getReserveButton());
+        takeScreenShot(scenario);
         click(stayDetails.getReserveButton());
     }
 
@@ -175,6 +187,8 @@ public class Tests extends BrowserActions {
         type(yourDetails.getFirstName(), firstName);
         type(yourDetails.getLastName(), lastName);
         type(yourDetails.getEmail(), email);
+        markElement(yourDetails.getDetailsForm());
+        takeScreenShot(scenario);
         click(yourDetails.getFinalDetails());
     }
 
@@ -184,5 +198,6 @@ public class Tests extends BrowserActions {
         fluentWait(accomodation.getDetailsLabel());
         click(accomodation.getCheckBooking());
         fluentWait(accomodation.getDetailsForm());
+        takeScreenShot(scenario);
     }
 }

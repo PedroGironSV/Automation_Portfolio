@@ -108,6 +108,7 @@ public class BrowserActions {
         String elementClass = targetElement.getAttribute("class"), querySelector;
         String elementTag = targetElement.getTagName();
         elementClass = elementClass.replace(" ", ".");
+        elementClass = elementClass.replace("..", ".");
         querySelector = "document.querySelector('" + elementTag + "." + elementClass
                 + "').style.border='3px solid red'";
         ((JavascriptExecutor) Driver.getDriver()).executeScript(querySelector);

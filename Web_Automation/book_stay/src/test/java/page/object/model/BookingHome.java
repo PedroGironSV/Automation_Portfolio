@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 public class BookingHome implements ISetUpWebElements{
     
     private By geniusExit, destination, monthYear, checkInDay, checkOutDay, calendar, nextCoupleMonths, calendarTable, search;
-    private By  occupancyConfig, done, adultsCount, roomsCount;
+    private By occupancyConfig, done, adultsCount, roomsCount;
     private By reduceAdults, increaseAdults, reduceRooms, increaseRooms;
 
     @Override
