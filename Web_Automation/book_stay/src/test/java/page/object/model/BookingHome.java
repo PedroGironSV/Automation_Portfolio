@@ -4,12 +4,13 @@ import org.openqa.selenium.By;
 
 public class BookingHome implements ISetUpWebElements{
     
-    private By geniusExit, destination, monthYear, checkInDay, checkOutDay, calendar, nextCoupleMonths, calendarTable, search;
+    private By geniusExit, credentialPicker, destination, monthYear, checkInDay, checkOutDay, calendar, nextCoupleMonths, calendarTable, search;
     private By occupancyConfig, done, adultsCount, roomsCount;
     private By reduceAdults, increaseAdults, reduceRooms, increaseRooms;
 
     @Override
     public void setUpWebElements() {
+        credentialPicker = By.id("credential_picker_container");
         geniusExit = By.cssSelector("button.fc63351294.a822bdf511.e3c025e003.fa565176a8.f7db01295e.c334e6f658.ae1678b153");
         destination = By.name("ss");
         monthYear = By.cssSelector("h3.ac78a73c96.ab0d1629e5");
@@ -32,6 +33,10 @@ public class BookingHome implements ISetUpWebElements{
 
     public By getGeniusExit() {
         return geniusExit;
+    }
+
+    public By getCredentialPicker(){
+        return credentialPicker;
     }
 
     public By getDestination() {

@@ -34,10 +34,10 @@ public class Tests extends BrowserActions {
 
     @Before
     public void setUpScenario(Scenario sc) {
-        try{
+        try {
             this.scenario = sc;
             FileUtils.cleanDirectory(new File("test/report/features/"));
-        }catch(Exception exception){
+        } catch (Exception exception) {
             exception.printStackTrace();
         }
     }
@@ -124,25 +124,25 @@ public class Tests extends BrowserActions {
         fluentWait(home.getAdultsCount());
         int currentAdults = Integer.parseInt(getCurrentCount(home.getAdultsCount(), ReservationType.ADULTS));
         int currentRooms = Integer.parseInt(getCurrentCount(home.getRoomsCount(), ReservationType.ROOMS));
-        if(currentAdults < adults){
-            while(currentAdults < adults){
+        if (currentAdults < adults) {
+            while (currentAdults < adults) {
                 increase(home.getIncreaseAdults(), ReservationType.ADULTS);
                 currentAdults = Integer.parseInt(getCurrentCount(home.getAdultsCount(), ReservationType.ADULTS));
             }
-        }else{
-            while(currentAdults > adults){
+        } else {
+            while (currentAdults > adults) {
                 reduce(home.getReduceAdults(), ReservationType.ADULTS);
                 currentAdults = Integer.parseInt(getCurrentCount(home.getAdultsCount(), ReservationType.ADULTS));
             }
         }
 
-        if(currentRooms < rooms){
-            while(currentRooms < rooms){
+        if (currentRooms < rooms) {
+            while (currentRooms < rooms) {
                 increase(home.getIncreaseRooms(), ReservationType.ROOMS);
                 currentRooms = Integer.parseInt(getCurrentCount(home.getRoomsCount(), ReservationType.ROOMS));
             }
-        }else{
-            while(currentRooms > rooms){
+        } else {
+            while (currentRooms > rooms) {
                 reduce(home.getReduceRooms(), ReservationType.ROOMS);
                 currentRooms = Integer.parseInt(getCurrentCount(home.getRoomsCount(), ReservationType.ROOMS));
             }

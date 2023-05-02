@@ -105,7 +105,7 @@ public class BrowserActions {
 
     public void markElement(By locator) {
         WebElement targetElement = Driver.getDriver().findElement(locator);
-        String elementClass = targetElement.getAttribute("class"), querySelector;
+        String elementClass = targetElement.getAttribute("class").replace("\n", " ").trim(), querySelector;
         String elementTag = targetElement.getTagName();
         elementClass = elementClass.replace(" ", ".");
         elementClass = elementClass.replace("..", ".");
