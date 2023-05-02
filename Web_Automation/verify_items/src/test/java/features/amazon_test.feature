@@ -16,4 +16,4 @@ Feature: Check items available to add to shopping cart
         Examples:
             | item               | page | index | itemsCount |
             | iPhone 14 PRO      | 2    | 3     | 1          |
-            | QA Automation book | 1    | 1     | 2          |
+            | QA Automation book | 1    | 2     | 2          |
