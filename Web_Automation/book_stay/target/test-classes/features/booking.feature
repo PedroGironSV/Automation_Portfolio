@@ -1,6 +1,6 @@
 Feature: Book a stay
 
-    As QA Automation I want to verify the process to book a stay on Booking.com page
+    I want to automate the End to End process to book a stay on Booking.com page
 
     Scenario Outline: Book a stay on "<destination>" from "<checkInDate>" to "<checkOutDate>"
         Given I navigate to Booking.com home page
