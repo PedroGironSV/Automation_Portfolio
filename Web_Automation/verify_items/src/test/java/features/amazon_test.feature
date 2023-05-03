@@ -5,14 +5,16 @@ Feature: Check items available to add to shopping cart
 
     Scenario Outline: Perform a seach for <item> and add it to the shopping cart
         Given I navigate to Amazon home page
-        And I type "<item>"
-        And I click on search button
-        When I see the results list for "<item>"
-        And I navigate to page "<page>"
-        And I select the item <index>
-        And I see the description and add the item to shopping cart
-        Then I see the confirmation message
-        And I see the cart items count is "<itemsCount>"
+        When I type "<item>"
+        Then I click on search button
+
+        Given I see the results list for "<item>"
+        When I navigate to page "<page>"
+        Then I select the item <index>
+
+        Given I see the description and add the item to shopping cart
+        When I see the confirmation message
+        Then I see the cart items count is "<itemsCount>"
         Examples:
             | item               | page | index | itemsCount |
             | iPhone 14 PRO      | 2    | 3     | 1          |

@@ -9,7 +9,6 @@ import actions.BrowserActions;
 import driver.Driver;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -40,7 +39,7 @@ public class Tests extends BrowserActions {
         takeScreenShot(scenario);
     }
 
-    @And("I type {string}")
+    @When("I type {string}")
     public void typeTheSearchedItem(String item) {
         home.setUpWebElements();
         fluentWait(home.getSearchBar());
@@ -50,13 +49,13 @@ public class Tests extends BrowserActions {
         takeScreenShot(scenario);
     }
 
-    @And("I click on search button")
+    @Then("I click on search button")
     public void clickOnSearchButton() {
         fluentWait(home.getSearchSubmitButton());
         click(home.getSearchSubmitButton());
     }
 
-    @When("I see the results list for {string}")
+    @Given("I see the results list for {string}")
     public void seeTheResultsListFor(String item) {
         String currentResultText;
         resultPage.setUpWebElements();
@@ -67,7 +66,7 @@ public class Tests extends BrowserActions {
         Assert.assertEquals("\"" + item + "\"", currentResultText);
     }
 
-    @And("I navigate to page {string}")
+    @When("I navigate to page {string}")
     public void navigateToPage(String page) {
         fluentWait(resultPage.getPaginationStrip());
         if (!page.equals("1")) {
@@ -80,7 +79,7 @@ public class Tests extends BrowserActions {
         takeScreenShot(scenario);
     }
 
-    @And("I select the item {int}")
+    @Then("I select the item {int}")
     public void selectTheItemOnIndexFromPage(int itemIndex) {
         resultPage.setTargetItemLink(itemIndex);
         explicitWait(resultPage.getTargetItemLink());
@@ -89,7 +88,7 @@ public class Tests extends BrowserActions {
         click(resultPage.getTargetItemLink());
     }
 
-    @And("I see the description and add the item to shopping cart")
+    @Given("I see the description and add the item to shopping cart")
     public void tryToAddTheItemToShoppingCart() {
         String addToCartButton = "Button Add to Cart is Present";
         itemDescription.setUpWebElements();
@@ -99,7 +98,7 @@ public class Tests extends BrowserActions {
         click(itemDescription.getAddToCart());
     }
 
-    @Then("I see the confirmation message")
+    @When("I see the confirmation message")
     public void seeTheConfirmationMessage() {
         String addToCartMessage = "Added to Cart message is displayed";
         fluentWait(itemDescription.getAddedMessage());
@@ -108,7 +107,7 @@ public class Tests extends BrowserActions {
         Assert.assertTrue(addToCartMessage, isWebElementDisplayed(itemDescription.getAddedMessage()));
     }
 
-    @And("I see the cart items count is {string}")
+    @Then("I see the cart items count is {string}")
     public void seeTheCartItemsCountIncreasing(String cartCount) {
         fluentWait(itemDescription.getCartItemsCount());
         markElement(itemDescription.getCartItemsCount());
