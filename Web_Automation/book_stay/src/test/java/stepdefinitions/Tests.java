@@ -13,7 +13,6 @@ import actions.ReservationType;
 import driver.Driver;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -51,7 +50,7 @@ public class Tests extends BrowserActions {
         takeScreenShot(scenario);
     }
 
-    @And("I choose {string} as destination")
+    @When("I choose {string} as destination")
     public void chooseDestination(String destination) {
         explicitWait(home.getDestination());
         type(home.getDestination(), destination);
@@ -59,7 +58,7 @@ public class Tests extends BrowserActions {
         takeScreenShot(scenario);
     }
 
-    @And("I set the period of stay from {string} to {string}")
+    @Then("I set the period of stay from {string} to {string}")
     public void setThePeriodOfStay(String checkInDate, String checkOutDate) {
         StringBuilder dataDateIn = new StringBuilder();
         StringBuilder dataDateOut = new StringBuilder();
@@ -118,7 +117,7 @@ public class Tests extends BrowserActions {
         }
     }
 
-    @When("I look for {int} rooms and {int} adults")
+    @Given("I look for {int} rooms and {int} adults")
     public void lookForRoomsAdultsChildren(int rooms, int adults) {
         click(home.getOccupancyConfig());
         fluentWait(home.getAdultsCount());
@@ -154,7 +153,7 @@ public class Tests extends BrowserActions {
         click(home.getSearch());
     }
 
-    @And("I scroll to a stay with {string} evaluation")
+    @When("I scroll to a stay with {string} evaluation")
     public void selectStayWithEvaluation(String evaluation) {
         searchResults.setUpWebElements();
         fluentWait(searchResults.getDestinationLabel());
@@ -164,7 +163,7 @@ public class Tests extends BrowserActions {
         takeScreenShot(scenario);
     }
 
-    @And("I select the option I want to book with {string} evaluation")
+    @Then("I select the option I want to book with {string} evaluation")
     public void selectOptionToBook(String evaluation) {
         searchResults.setAvailability(evaluation);
         click(searchResults.getAvailability());
@@ -179,7 +178,7 @@ public class Tests extends BrowserActions {
         click(stayDetails.getReserveButton());
     }
 
-    @Then("I complete the details firts name:{string}, last name:{string} and email:{string}")
+    @Given("I complete the details firts name:{string}, last name:{string} and email:{string}")
     public void completeDetails(String firstName, String lastName, String email) {
         yourDetails.setUpWebElements();
         fluentWait(yourDetails.getDetailsLabel());
@@ -192,7 +191,7 @@ public class Tests extends BrowserActions {
         click(yourDetails.getFinalDetails());
     }
 
-    @And("I check the details of the selected accommodation")
+    @When("I check the details of the selected accommodation")
     public void checkAccommodationDetails() {
         accomodation.setUpWebElements();
         fluentWait(accomodation.getDetailsLabel());
