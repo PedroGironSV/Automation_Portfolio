@@ -21,7 +21,7 @@ public class AmazonResultsPage implements ISetUpWebElements{
     }
 
     public void setTargetPageLink(String partialLinkText){
-        targetPageLink = By.linkText(partialLinkText);
+        targetPageLink = By.xpath("//a[text()='"+ partialLinkText +"']");
     }
 
     public By getTargetPageLink(){
