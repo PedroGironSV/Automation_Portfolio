@@ -8,7 +8,7 @@ public class Driver {
     private static String URL = "https://www.booking.com/";
 
     public static WebDriver setUpDriver(){
-        driver = WebDriverFactory.getDriver(Browser.EDGE);
+        driver = WebDriverFactory.getDriver(Browser.CHROME);
         driver.manage().window().maximize();
         driver.get(URL);
         return driver;

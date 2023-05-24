@@ -16,7 +16,7 @@ public class BookingHome implements ISetUpWebElements{
         monthYear = By.cssSelector("h3.ac78a73c96.ab0d1629e5");
         calendar = By.cssSelector("button.d47738b911.e246f833f7.fe211c0731");
         nextCoupleMonths = By.cssSelector("button.fc63351294.a822bdf511.e3c025e003.fa565176a8.cfb238afa1.c334e6f658.ae1678b153.c9fa5fc96d.be298b15fa");
-        calendarTable = By.cssSelector("div.c5d667353d.efea941f13 > div");
+        calendarTable = By.cssSelector("div.b91c144835");
         occupancyConfig = By.cssSelector("button.d47738b911.b7d08821c3");
 
         adultsCount = By.cssSelector("div:nth-child(1) > div.e98c626f34 > span");
