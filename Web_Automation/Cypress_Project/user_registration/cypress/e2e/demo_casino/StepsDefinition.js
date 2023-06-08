@@ -49,3 +49,34 @@ And("I select the Create Account button", () => {
 Then("I can see a successful registration message: {string}", (successRegMessage) => {
     registration.verifySuccessfulRegistrationMessage(successRegMessage);
 })
+
+/*
+    STEPS DEFINITION FOR USER REGISTRATION - FAILED SCENARIO
+*/
+
+Given("I click on Sing Up button", () => {
+    registration.clickOnSignUpButton();
+})
+
+When("I type a registered email {string} and password {string}", (email, password) => {
+    registration.typeEmail(email);
+    registration.typePassword(password);
+    registration.confirmPassword(password);
+})
+
+And("I select my rather currency {string}", (currency) => {
+    registration.clickOnCurrencyDropDown();
+    registration.selectRatherCurrency(currency);
+})
+
+Then("I complete the registration form", () => {
+    registration.acceptTermsAndConditions();
+})
+
+And("I select the Create Account button", () => {
+    registration.selectCreateAccountButton();
+})
+
+Then("I get an error message: {string}", (failedRegMessage) => {
+    registration.verifyErrorRegistrationMessage(failedRegMessage);
+})

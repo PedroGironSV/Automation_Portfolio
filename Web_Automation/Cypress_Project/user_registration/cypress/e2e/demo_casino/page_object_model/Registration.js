@@ -9,8 +9,10 @@ class RegistrationActions {
         selectCurrency: (currency) => cy.get('.selectric-items div.selectric-scroll').eq(1).contains(currency).click(),
         termsAndConditions: () => cy.get('label').contains('I unconditionally agree with').should('be.visible').click(),
         verifyRegistrationButton: () => cy.get('button').contains('Create account').scrollIntoView().should('be.visible'),
-        createAccountButton: () => cy.get('button').contains('Create account').scrollIntoView().should('be.visible').click(),
-        successfulRegistrationMessage: (successRegMessage) => cy.get('p').contains('Registration successfully finished').should('have.text', successRegMessage)
+        createAccountButton: () => cy.get('button').contains('Create account').click(),
+        successfulRegistrationMessage: (successRegMessage) => cy.get('p').contains('Registration successfully finished').should('have.text', successRegMessage),
+        scrollToAlertMessage: () => cy.get('div').contains('Email').scrollIntoView(),
+        errorRegistrationMessage: (failedRegMessage) => cy.get('#core__protected_modules_user_yiiForm_RegistrationForm_email_em_').contains(failedRegMessage).should('be.visible')
     }
 
     clickOnSignUpButton(){
@@ -48,6 +50,11 @@ class RegistrationActions {
 
     verifySuccessfulRegistrationMessage(successRegMessage){
         this.registrationElements.successfulRegistrationMessage(successRegMessage);
+    }
+
+    verifyErrorRegistrationMessage(failedRegMessage){
+        this.registrationElements.scrollToAlertMessage();
+        this.registrationElements.errorRegistrationMessage(failedRegMessage);
     }
 }
 

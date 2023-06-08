@@ -4,7 +4,8 @@
   "description": "Automation project with Cypress and Cucumber",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "successful-scenarios": "cypress run -e TAGS=\"@Successful\" --headed --browser chrome",
+    "failed-scenarios": "cypress run -e TAGS=\"@Failed\" --headed --browser chrome"
   },
   "author": "Pedro Girón",
   "license": "ISC",

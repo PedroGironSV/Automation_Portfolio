@@ -8,6 +8,7 @@ Feature: User Registration and Login
         When I can see the Welcome message
         Then I close the Welcome message card
 
+    @Successful
     Scenario Outline: Register a new user - Successful scenario
         Given I click on Sing Up button
         When I type my email "<email>" and password "<password>"
@@ -19,6 +20,7 @@ Feature: User Registration and Login
             | email                | password  | currency | successRegMessage                                                      |
             | testmail02@gmail.com | pa$Test01 | EUR      | Registration successfully finished! Confirmation has been sent to you. |
 
+    @Failed
     Scenario Outline: Register a new user - Failed scenario
         Given I click on Sing Up button
         When I type a registered email "<registeredEmail>" and password "<password>"
@@ -27,5 +29,5 @@ Feature: User Registration and Login
         And I select the Create Account button
         Then I get an error message: "<failedRegMessage>"
         Examples:
-            | registeredEmail | password | currency | failedRegMessage                                                                    |
-            | test1@gmail.com | Abcde$23 | EUR      | This email has been used for registration already. Please contact customer support. |
+            | registeredEmail | password | currency | failedRegMessage                                                                   |
+            | test1@gmail.com | Abcde$23 | EUR      | This email has been used for registration already. Please contact customer support |
