@@ -1,0 +1,19 @@
+{
+  "name": "user_registration",
+  "version": "1.0.0",
+  "description": "Automation project with Cypress and Cucumber",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pedro Girón",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.14.0",
+    "cypress-cucumber-preprocessor": "^4.3.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "step_definitions": "cypress/e2e/demo_casino"
+  }
+}
