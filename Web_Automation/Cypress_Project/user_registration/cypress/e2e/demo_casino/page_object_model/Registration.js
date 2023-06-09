@@ -1,18 +1,21 @@
+import registration from "../web_elements/RegistrationElements";
+import validate from "../web_elements/Validations";
+
 class RegistrationActions {
 
     registrationElements = {
-        signUpButton: () => cy.get('a').contains('Sign up').should('be.visible').click(),
-        emailInput: (email) => cy.get('#core__protected_modules_user_yiiForm_RegistrationForm_email').should('be.enabled').scrollIntoView().type(email),
-        passwordInput: (password) => cy.get('#core__protected_modules_user_yiiForm_RegistrationForm_password').type(password),
-        confirmPasswordInput: (password) => cy.get('#core__protected_modules_user_yiiForm_RegistrationForm_password_confirmation').type(password),
-        currencyDropDown: () => cy.get('span').contains('USD').click(),
-        selectCurrency: (currency) => cy.get('.selectric-items div.selectric-scroll').eq(1).contains(currency).click(),
-        termsAndConditions: () => cy.get('label').contains('I unconditionally agree with').should('be.visible').click(),
-        verifyRegistrationButton: () => cy.get('button').contains('Create account').scrollIntoView().should('be.visible'),
-        createAccountButton: () => cy.get('button').contains('Create account').click(),
-        successfulRegistrationMessage: (successRegMessage) => cy.get('p').contains('Registration successfully finished').should('have.text', successRegMessage),
-        scrollToAlertMessage: () => cy.get('div').contains('Email').scrollIntoView(),
-        errorRegistrationMessage: (failedRegMessage) => cy.get('#core__protected_modules_user_yiiForm_RegistrationForm_email_em_').contains(failedRegMessage).should('be.visible')
+        signUpButton: () => cy.get(registration.anchorTag).contains(registration.signUpText).should(validate.BE_VISIBLE).click(),
+        emailInput: (email) => cy.get(registration.emailId).should(validate.BE_ENABLED).scrollIntoView().type(email),
+        passwordInput: (password) => cy.get(registration.passwordId).type(password),
+        confirmPasswordInput: (password) => cy.get(registration.confirmPasswordId).type(password),
+        currencyDropDown: () => cy.get(registration.spanTag).contains(registration.usdText).click(),
+        selectCurrency: (currency) => cy.get(registration.currencyDropDownClass).eq(1).contains(currency).click(),
+        termsAndConditions: () => cy.get(registration.labelTag).contains(registration.termnsAndConditionsText).should(validate.BE_VISIBLE).click(),
+        verifyRegistrationButton: () => cy.get(registration.buttonTag).contains(registration.createAccountText).scrollIntoView().should(validate.BE_VISIBLE),
+        createAccountButton: () => cy.get(registration.buttonTag).contains(registration.createAccountText).click(),
+        successfulRegistrationMessage: (successRegMessage) => cy.get(registration.pTag).contains(registration.successRegistrationMessage).should(validate.HAVE_TEXT, successRegMessage),
+        scrollToAlertMessage: () => cy.get(registration.labelTag).contains(registration.emailText).scrollIntoView(),
+        errorRegistrationMessage: (failedRegMessage) => cy.get(registration.errorRegistrationId).contains(failedRegMessage).should(validate.BE_VISIBLE)
     }
 
     clickOnSignUpButton(){

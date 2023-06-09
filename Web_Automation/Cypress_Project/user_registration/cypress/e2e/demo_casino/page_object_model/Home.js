@@ -1,10 +1,12 @@
+import home from "../web_elements/HomeElements";
+import validate from "../web_elements/Validations";
+
 class HomeActions {
 
     homeElements = {
         visitDemoCasino: () => cy.visit('https://demo.casino/', { failOnStatusCode: false }),
-        welcomeCard: () => cy.get('.mfp-content'),
-        closeWelcomeCardButton: () => cy.get('button').contains('Got it').should('be.visible').click(),
-        signUpButton: () => cy.get('a').contains('Sign up')
+        welcomeCard: () => cy.get(home.welcomeCardClass),
+        closeWelcomeCardButton: () => cy.get(home.closeCardButton).contains(home.closeCardText).should(validate.BE_VISIBLE).click()
     }
 
     handleUncaughtExceptions() {
