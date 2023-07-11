@@ -16,4 +16,4 @@ Feature: Book a stay
 
         Examples:
             | firstName | lastName | destination | evaluation | checkInDate | checkOutDate | rooms | adults | email              |
-            | Pedro     | Giron    | Las Vegas   | Good       | 15/06/2023  | 25/06/2023   | 3     | 6      | testmail@gmail.com |
+            | Pedro     | Giron    | Las Vegas   | Good       | 15/08/2023  | 05/09/2023   | 3     | 6      | testmail@gmail.com |
