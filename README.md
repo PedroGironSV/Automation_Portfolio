@@ -1,5 +1,5 @@
 <h1 align="center">UI and REST APIs automation projects</h1>
-<h3 align="center">Own projects performed with the most demanded automation tools nowadays</h3>
+<h3 align="center">Personal projects performed with the most demanded automation tools nowadays</h3>
 
 <div align="center">
 
