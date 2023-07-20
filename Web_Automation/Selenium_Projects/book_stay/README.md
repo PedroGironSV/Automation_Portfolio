@@ -1,6 +1,6 @@
 ﻿**Book a stay - Web Automation Project**
 
-Book a stay to any destination on Booking.com web page, using as automation stack the following technologies:
+Book a stay to any destination on Booking.com web site, using as automation stack the following technologies:
 
  - Maven project
  - Java
