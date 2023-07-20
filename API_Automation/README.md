@@ -1,6 +1,6 @@
 ﻿**REST APIs Automation Project**
 
-Free testing APIs to perform the main HTTP requetests: GET, POST, PUT, PATCH and DELETE, using as automation stack the following technologies:
+Run the main HTTP requetests: GET, POST, PUT, PATCH and DELETE, using as automation stack the following technologies:
 
  - Postman
  - Newman command line
