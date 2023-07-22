@@ -4,8 +4,10 @@
   "description": "Automation project with Cypress and Cucumber",
   "main": "index.js",
   "scripts": {
-    "successful-scenarios": "cypress run -e TAGS=\"@Successful\" --headed --browser chrome",
-    "failed-scenarios": "cypress run -e TAGS=\"@Failed\" --headed --browser chrome"
+    "new-user": "cypress run -e TAGS=\"@Successful-New-User\" --headed --browser chrome",
+    "failed-new-user": "cypress run -e TAGS=\"@Failed-New-User\" --headed --browser chrome",
+    "login": "cypress run -e TAGS=\"@Successful-Login\" --headed --browser chrome",
+    "failed-login": "cypress run -e TAGS=\"@Failed-Login\" --headed --browser chrome"
   },
   "author": "Pedro Girón",
   "license": "ISC",
