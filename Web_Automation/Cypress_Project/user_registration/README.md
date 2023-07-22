@@ -1,4 +1,4 @@
-**User Registration and Login - Cypress Project**
+**User Registration and Login - Web Automation Project**
 
 Automated Registration and Login flows on demo.casino web site, using as automation stack the following technologies:
 
