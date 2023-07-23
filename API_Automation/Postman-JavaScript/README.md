@@ -25,25 +25,26 @@ git clone https://github.com/PedroGironSV/Automation_Portfolio.git
 
  - Open the project on VS Code
  - Open New Terminal
- - Navigate to API_Automation folder
+ - Navigate to 'Postman-JavaScript' folder
  ```
-cd API_Automation/
+cd API_Automation/Postman-JavaScript
 ```
 
-![enter image description here](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjv8JHTQ5lGppKPtnGDOFwacmMrY_lEznnhtJmq2IVmfzEaHt7ungULPmN7Pz8JJ31-GudGXq_1QdiaemlYGs8DCNEE9fDo5PvCr35JTJZhWw7YXK7cXCBQ0q_llx-ALxqxsZcVX1Tt-enL5bPRhXZHBn-CIzx9QUavdpPdezhey1pMHNia8Tegiykh7A/w640-h134/1.API_Automation_Folder.PNG)
+![enter image description here](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjiEGbQwx4KS8ZPMEMBPbEQNJloYvpbzUE_tG1CGGO6Fg50cIGxPIAw0hiDmO8jFsTfYAjVrnVGQD17rGFielHSQkJa4eTY_Iot-4XaenJIm-jUxuPwpiMDtJxXiIXWfkDUWyVWnEI-w7cjew8jOzNHp2Myd6a_iS053cfshbINW8PjT8Zl4d9Kt39jwImY/w640-h92/1.%20open%20folder.PNG)
  - Run the Newman js script
  ```
 node newman_runner.js
 ```
 
-![enter image description here](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjGC_tLgQh0wJERXf9p6pwFsMMj1cjW_q0Sz1MzX7Yy1bUAyctTThRS7Lq_mT_zHMUzqUqVwjvS6uvBdgJgNDT5AtawEfE7gjvCTt4-DIsZxyqZYbcRjf65eOhXBAndEwanEr6j66xFVH1X6AZdtQJrur9wTcaRGwslK0jigGS6ZAG8IaVBDtwciukoqg/w640-h178/2.Newman_Runner.PNG)
+![enter image description here](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj2fh9vZK_TTdEfYEQk1uemyudQKDe5_e3cPRH7T6RePmBswmVyPLV-uqif4IaoBhJYn6kg3g8Tk1gxMxP5LBCg8OXraGxcUtEMsuUYicuLOpuYqJ_h4OIyRdUtP7el0a1Imn3rgWDuU7TSnDOoymQ-j3Lq_tL2E_-w_SZXeYu3G7KmQ4lM0La5X2lueOvu/w640-h224/2.%20runner.PNG)
+
  - Wait a few seconds while the tests are executed
 
 ![enter image description here](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEihztXuRKM9rD6Err0Ff9fvIh45D1re763rqH_QOzVyoXGt0xVLNEgRe38tWbfZ3ektzy1JPwbFWaScac6fWc0sl-GH6ptifYkX1AAJafzN1R936bqpLwHRhv8AiT6bMG2alupHYz3-3x9-MLJsxIyw1jp1RitueuY2Dh6wIURvS73QH1FHwH8ZW28KjA/w640-h174/3.Wait_CLI_Execution.PNG)
 
  - Review the Execution Report generated with newman-reporter-htmlextra
 
-![enter image description here](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiRZpDTSg7nFTUJEmU8thr0KEbClA9PpwcxmnYyAUvEJYy6MZ2XRnEUMHH4iwRKdUdrehcPPcnGg4t6QxlPl9uHFF4RTm-J7D7oR7G64Z2U2HLaTnH8mZ_Y9UbpkJZzWKb7l8QGs57lb42PVnXCEzFUXCUL1lTkrSULEikw3hq8YiPwqqk2BBEjFihDUg/w640-h434/4.Execution_Report.PNG)
+![enter image description here](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjQfZHde4wouIprA3pn_0Z8Kl1GU_JT6fiIYj2hHkQ0d1mbc0L0zWWptFOz-HOtyNH2z4l36OHFitZsxVjRKnILKhpWOfw20orIDbD827C6wWPFp37oxrsR57S01PMgK-Ck5VFalVgsmgDwXm_XkRpeRwGGvaaaB2CevPuzQjNOhBv7ZNWXT4MEBWOlHDGu/w640-h172/3.%20finished.PNG)
 
  - Tests executed general view
 
