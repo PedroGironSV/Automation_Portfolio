@@ -1,0 +1,11 @@
+{
+  "name": "requests-pytest",
+  "version": "1.0.0",
+  "description": "API testing with Python and Pytest",
+  "main": "index.js",
+  "scripts": {
+    "test": "python -m pytest -v --html=execution_report.html JSON_Placeholder_testing.py"
+  },
+  "author": "Pedro Giron",
+  "license": "ISC"
+}
