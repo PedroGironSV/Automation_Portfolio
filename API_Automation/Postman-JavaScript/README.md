@@ -61,23 +61,23 @@ node newman_runner.js
  **Run API test using Postman**
  - Open the project on VS Code
  - Open New Terminal
- - Navigate to API_Automation folder
+ - Navigate to 'Postman-JavaScript' folder
  ```
-cd API_Automation/
+cd API_Automation/Postman-JavaScript
 ```
 - Setup Postman server js
  ```
 node postman_server.js
 ```
 
-![enter image description here](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEibtqvujzUg_DxldZj-1AyRCGKRSlinS7IEfVOJPEqvFZ22bisICUjBg5WZWq1IOJyi9w3KDbZA_y0ngoulxYsyIpugSw0Lnvxaf4nmRqwP_VlhmDrQDJmzjVs5Rvk7pCwIHVtknDNlN3dkaQzrD7miP8bkI2lCYBFNbYuXoh3PKX2hHRnsVKvLW-AKig/w640-h210/2.Postman_Server.PNG)
+![enter image description here](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg0MnNsnz2zkKEbhZDY112m63_ufXMt4hdWkcGAqiUgUrSJU2r23G_BfInjITmDi7PF6o-XXi0CXmEMhbY_gOXfSSPh22GfRZPi0S7UhkjdgcgWy6NHC_U3EKOj_WtSZKtdSHMVA5n6LX7JAej09w3cQKAe2DTtcUXR5hEkKkRrpFnh0e1JZM9tsHgnZzK_/w640-h154/1.%20postman_runner.PNG)
 
  - Open Postman and login with any email account
  - Go to 'Environments' tab and select 'Import'
 
 ![enter image description here](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQz-vICl1NXOAcSqHSiL-M64A6ia7kOeg7Tk-bwLlnXNB-Gw27q1zY5P5lcS2mUD9VvFl-xETfwmuK-mTh61e5rpRjfA_jKzeorrjvdy_y0TjGEIXB26lJJw2CFwypoEm-CBToOGt7HZ-9dv0dp4un2dba678jAsG5ZKDNORWzW44Zfl_FoeMx8uawiA/w534-h640/3.Load_Environment.PNG)
 
- - Navigate to 'Automation_Portfolio\API_Automation\API_Tests\Library' and select the file 'TEST_ENVIRONMENT.json'
+ - Navigate to 'Automation_Portfolio\API_Automation\Postman-JavaScript\TestData\Library' and select the file 'TEST_ENVIRONMENT.json'
  
  ![enter image description here](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi6zkxHYqcPo1Ypjqx5YZxb0oz_plfjoGs6fnIq4BPScly-a5_XJ15Pn_lNt_vPFczwdiE8ZAP2hlX630N7s8OpAt2UH6oXsN6RNCkRcREdUqJlm1Bjh-dyKXq_87_TcntaRCcKj9FFfCqPdQxeAZdetnw2v_luJp4RSCvhfkdayfPY1DNUfBEOLOMbTA/w640-h422/3.1Upload%20file.PNG)
 
@@ -87,10 +87,10 @@ node postman_server.js
  
  ![enter image description here](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjfZ8pRfrWTjN_hhFfDSn91oThJ3hKtWwL1Rh-rj70FbWxVGKXvSJhcW2ZuaJZxfqeu3MR7nwwv-Zv-nqDrmTgAdjMtUKEscs_FDEm4ykKSDqxTL0MHR3tBCdgYzCWlbeCnwWiwvB5oifwzrvm_z8TimUj9VPO85uvZ8gpE4rfIT_dxn0ZW94fIP667jg/w538-h640/4.Load_Collection.PNG)
  
- - Select the file 'API_COLLECTION.postman_collection.json'
+ - Select the file 'JSON_Placeholder.postman_collection.json'
 
 
-![enter image description here](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh9MLOxT59jAln6zWC5SrnU-7jwgsEEhham65Y3JcUuo-1wKhHzUEHLp8svwfA_P8yaEAilUA-wiMoHUkwmOe4IT-Vc9rEzbis9FKZRJQInEUEfFdeP3NW-FnCtJfFIG_v9J5RSt0Jg9D1KErrldijbt5-9OZNAAcjCDMHeA-T7fIa5tZySHpmnsnFs6g/w640-h404/4.1Upload_Collection.PNG)
+![enter image description here](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguhAZMhRhcX0Yzp9A639k8QgUzvj1px7DD4M5orvQOEiLD-nabQKYmgkXVxJ6v588F7vVVJajU4yPP2TvxkRSQMzwVWq8sASmmmGes7Wt3p_pzQ02IgUcf-eeiu8FOo0gsofC7DosniA4XjmUJA9OxC6LSD1SdmZBYDyulUds2H_95Dfcb8-vCWgZj_9FV/w640-h398/2.%20collection.PNG)
 
  - Click on the three dots button, then select 'Run collection'
 
