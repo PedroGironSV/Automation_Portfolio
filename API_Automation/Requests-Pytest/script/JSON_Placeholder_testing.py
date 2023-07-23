@@ -1,5 +1,6 @@
 import requests
-import json
+from report_logger import log_request_details
+
 
 base_uri = "https://jsonplaceholder.typicode.com"
 
@@ -10,7 +11,7 @@ def test_get_request():
     response = requests.get(base_uri + base_path, timeout=5)
 
     # Log execution details on test report
-    log_request_details("GET", base_path, "N/A", response)
+    log_request_details("GET", base_uri, base_path, "N/A", response)
 
     # Assertions
     assert response.status_code == 200
@@ -30,7 +31,7 @@ def test_post_request():
     response = requests.post(base_uri + base_path, json=request_body, timeout=5)
 
     # Log execution details on test report
-    log_request_details("POST", base_path, request_body, response)
+    log_request_details("POST", base_uri, base_path, request_body, response)
 
     # Assertions
     assert response.status_code == 201
@@ -51,7 +52,7 @@ def test_put_request():
     response = requests.put(base_uri + base_path, json=updated_body, timeout=5)
 
     # Log execution details on test report
-    log_request_details("PUT", base_path, updated_body, response)
+    log_request_details("PUT", base_uri, base_path, updated_body, response)
 
     assert response.status_code == 200
     put_json_response = response.json()
@@ -71,7 +72,7 @@ def test_patch_request():
     response = requests.patch(base_uri + base_path, json=partial_updated_body, timeout=5)
 
     # Log execution details on test report
-    log_request_details("PATCH", base_path, partial_updated_body, response)
+    log_request_details("PATCH", base_uri, base_path, partial_updated_body, response)
 
     assert response.status_code == 200
     patch_json_response = response.json()
@@ -86,15 +87,6 @@ def test_delete_request():
     response = requests.delete(base_uri + base_path, timeout=5)
 
     # Log execution details on test report
-    log_request_details("DELETE", base_path, "N/A", response)
+    log_request_details("DELETE", base_uri, base_path, "N/A", response)
 
     assert response.status_code == 200
-
-
-def log_request_details(method, basePath, request_body, response):
-    print("***** REQUEST *****")
-    print(method + " " + base_uri + basePath)
-    print("Request body: \n" + f"{json.dumps(request_body, indent=4)}")
-    print("\n***** RESPONSE *****")
-    print("Status Code: " + str(response.status_code))
-    print("Response body: \n" + f"{json.dumps(response.json(), indent=4)}")
