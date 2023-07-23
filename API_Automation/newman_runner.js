@@ -26,8 +26,8 @@ function executeCollection(){
     
 
     newman.run({
-        collection: 'API_Tests/Library/API_COLLECTION.postman_collection.json',
-        environment: 'API_Tests/Library/TEST_ENVIRONMENT.json',
+        collection: 'TestData/Library/JSON_Placeholder.postman_collection.json',
+        environment: 'TestData/Library/TEST_ENVIRONMENT.json',
         reporters: ['htmlextra'],
         reporter: {
             htmlextra: {

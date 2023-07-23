@@ -4,18 +4,18 @@
 	"values": [
 		{
 			"key": "url_initialization_framework",
-			"value": "http://localhost:8080/API_Tests/Library/framework.js",
+			"value": "http://localhost:8080/TestData/Library/framework.js",
 			"type": "default",
 			"enabled": true
 		},
 		{
 			"key": "url_initialization_test_validations",
-			"value": "http://localhost:8080/API_Tests/tests_validations.js",
+			"value": "http://localhost:8080/TestData/tests_validations.js",
 			"enabled": true
 		},
 		{
 			"key": "url_initialization_input_data",
-			"value": "http://localhost:8080/API_Tests/InputData.json",
+			"value": "http://localhost:8080/TestData/InputData.json",
 			"enabled": true
 		},
 		{
