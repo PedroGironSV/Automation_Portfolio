@@ -11,6 +11,7 @@ Verify items available to add to shopping cart on Amazon web site, using as auto
 **Local configuration requirements**
 
  - [Install Visual Studio Code](https://code.visualstudio.com/download)
+ - [Install Node JS](https://nodejs.org/es/download)
  - Add the following plugins on VS Code:
 
 ```

@@ -11,6 +11,7 @@ Book a stay to any destination on Booking.com web site, using as automation stac
 **Local configuration requirements**
 
  - [Install Visual Studio Code](https://code.visualstudio.com/download)
+ - [Install Node JS](https://nodejs.org/es/download)
  - Add the following plugins on VS Code:
 
 ```
