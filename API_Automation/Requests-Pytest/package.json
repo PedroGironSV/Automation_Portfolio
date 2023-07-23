@@ -4,8 +4,11 @@
   "description": "API testing with Python and Pytest",
   "main": "index.js",
   "scripts": {
-    "test": "python -m pytest -v --html=execution_report.html JSON_Placeholder_testing.py"
+    "test": "node pytest_runner.js"
   },
   "author": "Pedro Giron",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "shelljs": "^0.8.5"
+  }
 }
