@@ -1,5 +1,5 @@
 import requests
-from report_logger import log_request_details
+from report.report_logger import log_request_details
 
 
 base_uri = "https://jsonplaceholder.typicode.com"
