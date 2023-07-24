@@ -32,6 +32,14 @@ git clone https://github.com/PedroGironSV/Automation_Portfolio.git
 
 ![enter image description here](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiwIooSOIjixrrOe98ys6197aQzVdgE3GfCNrGy4_T1xFgOcJWDP2zIKHE9dw14671gX1U1-dm_P6FU2LI5vYp20Jr4gxtRlVAIS7sp1_9dQL4vk7QTCgYMCeJChuoMLT5oHFOqVm1A2chIGXpZGU3WS1fjNhdzKKLPnGKLyLa_kzLk-QDt982T1Vuoy1LO/w640-h186/1.%20Cypress_install.PNG)
 
+ - Navigate to 'user_registration' folder
+
+    ```
+    cd Web_Automation/Cypress-JavaScript/user_registration
+     ```
+
+	![enter image description here](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhjMUSoV8kpQpmHgiSArROtz9GDxYDvP6jw7uX_MPhj5_GlfdNoMptah0aHodzn8GDBpqyxHKyOoepQzQFFloayq40OFIT9yCmphLChoehpU0VSHSiQdSaTYSzvRPE6Mg8dDZUEQGqc12FIJ-mIEm8iI-JV_ImbVlH-EJK1z6wW1MxKPFara54nnhIX5nUN/w640-h132/1.2%20user_reg.PNG)
+
  - You can choose the test that you want to execute, thanks to the Cucumber Tags implementation
    
    Register a new user:
