@@ -1,6 +1,6 @@
 **JSON Placeholder - APIs Automation Project**
 
-Run the main HTTP requetests: GET, POST, PUT, PATCH and DELETE, using as automation stack the following technologies:
+API testing for the main HTTP requetests: GET, POST, PUT, PATCH and DELETE, using as automation stack the following technologies:
 
  - Python
  - Pytest
