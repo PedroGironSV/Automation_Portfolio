@@ -1,6 +1,6 @@
 ﻿**JSON Placeholder APIs Project**
 
-Automated the main HTTP requests, using the following technologies:
+Postman collections implementation to run manual and automated tests for the main HTTP requests, using the following technologies:
 
  - Postman
  - Newman command line
