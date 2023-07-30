@@ -6,7 +6,6 @@ Run the main HTTP requetests: GET, POST, PUT, PATCH and DELETE, using as automat
  - Newman command line
  - JavaScript
  - Node JS
- - Gherkin language
  - Newman report
 
 **Local configuration requirements**
