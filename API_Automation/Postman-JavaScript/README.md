@@ -1,6 +1,6 @@
-﻿**REST APIs Automation Project**
+﻿**JSON Placeholder APIs Project**
 
-Run the main HTTP requetests: GET, POST, PUT, PATCH and DELETE, using as automation stack the following technologies:
+Automated the main HTTP requests, using the following technologies:
 
  - Postman
  - Newman command line
