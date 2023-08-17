@@ -1,4 +1,4 @@
-﻿**JSON Placeholder APIs Project**
+﻿**Postman Collections Project**
 
 Postman collections implementation to run manual and automated tests for the main HTTP requests, using the following technologies:
 
