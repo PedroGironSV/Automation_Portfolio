@@ -1,5 +1,5 @@
 <h1 align="center">UI and REST APIs automation projects</h1>
-<h2 align="left">I have professional experience with many automation tools and technologies, here you can review some projects I have developed using the most demanded automation tools.</h2>
+<h2 align="left">I have professional experience with many automation technologies, here you can review some projects I have developed using the most demanded automation tools.</h2>
 
 
 
