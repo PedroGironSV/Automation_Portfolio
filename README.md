@@ -16,7 +16,7 @@
 
 <h3>REST API Automation Projects</h3>
 
-  <a href="https://github.com/PedroGironSV/Automation_Portfolio/tree/automation-portfolio/API_Automation/Pytest-Python">JSON Placeholder APIs</a> - Main stack: Python, Requests, Pytest
+  <a href="https://github.com/PedroGironSV/Json_Placeholder">JSON Placeholder APIs</a> - Main stack: Python, Requests, Pytest
   
   <a href="https://github.com/PedroGironSV/Automation_Portfolio/tree/automation-portfolio/API_Automation/Postman-JavaScript">Postman Collections</a> - Main stack: Postman, Newman, JavaScript
 
