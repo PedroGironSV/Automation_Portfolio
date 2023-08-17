@@ -1,4 +1,4 @@
-﻿**Verify Items - Web Automation Project**
+﻿**Add items to Shopping Cart - Web Automation Project**
 
 Verify items available to add to shopping cart on Amazon web site, using as automation stack the following technologies:
 
