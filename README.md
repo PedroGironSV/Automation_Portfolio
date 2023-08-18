@@ -9,7 +9,7 @@
 
   <a href="https://github.com/PedroGironSV/Automation_Portfolio/tree/automation-portfolio/Web_Automation/Cypress-JavaScript/user_registration">User Registration</a> - Main stack: Cypress, JavaScript
 
-  <a href="https://github.com/PedroGironSV/Automation_Portfolio/tree/automation-portfolio/Web_Automation/Selenium-Java/book_stay">Book a stay</a> - Main stack: Selenium, Java, Cucumber
+  <a href="https://github.com/PedroGironSV/Book_Stay">Book a stay</a> - Main stack: Selenium, Java, Cucumber
   
   <a href="https://github.com/PedroGironSV/Automation_Portfolio/tree/automation-portfolio/Web_Automation/Selenium-Java/verify_items">Add items to shopping cart</a> - Main stack: Selenium, Java, Cucumber
 
