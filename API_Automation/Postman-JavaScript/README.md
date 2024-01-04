@@ -32,7 +32,7 @@ cd API_Automation/Postman-JavaScript
 ![enter image description here](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjiEGbQwx4KS8ZPMEMBPbEQNJloYvpbzUE_tG1CGGO6Fg50cIGxPIAw0hiDmO8jFsTfYAjVrnVGQD17rGFielHSQkJa4eTY_Iot-4XaenJIm-jUxuPwpiMDtJxXiIXWfkDUWyVWnEI-w7cjew8jOzNHp2Myd6a_iS053cfshbINW8PjT8Zl4d9Kt39jwImY/w640-h92/1.%20open%20folder.PNG)
  - Run the Newman js script
  ```
-node newman_runner.js
+npm run newman
 ```
 
 ![enter image description here](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj2fh9vZK_TTdEfYEQk1uemyudQKDe5_e3cPRH7T6RePmBswmVyPLV-uqif4IaoBhJYn6kg3g8Tk1gxMxP5LBCg8OXraGxcUtEMsuUYicuLOpuYqJ_h4OIyRdUtP7el0a1Imn3rgWDuU7TSnDOoymQ-j3Lq_tL2E_-w_SZXeYu3G7KmQ4lM0La5X2lueOvu/w640-h224/2.%20runner.PNG)
